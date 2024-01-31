@@ -1,0 +1,41 @@
+---
+title: "Week 1 Notebook"
+output: html_document
+---
+
+
+Do your best to write in the style of a scientific publication.
+We will spend some time in class discussing some general conventions
+and guidelines for scientific writing. 
+
+# Write your methods for this week in the following space:
+
+
+
+
+
+# Write your results for this week in the following space:
+
+
+```{r, if you need any code blocks, you can instantiate them like this}
+
+
+```
+
+
+# Conceptual Questions
+
+In this repo, in the docs section, we have provided you with a multiQC report
+generated from the full data run with the same tools as you have. Compare the
+report **you** generated from the subsampled data to the provided report.
+
+1. When comparing the two reports, which modules appear to be most influenced by 
+    the size of the files? Which modules show consistent results?
+
+
+
+2. Look at the **full** report, you'll notice that the duplication rates for the
+    P0, P4, and P7 samples appear to be relatively close together (~50%). The 
+    duplication rates for the AD samples appear to be much higher. Provide at least
+    one biological and one technical reason that might explain these results. Can you
+    describe how you might confirm your provided explanations. 

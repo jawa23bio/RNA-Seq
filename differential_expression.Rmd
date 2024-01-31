@@ -1,0 +1,7 @@
+---
+title: "Differential Expression"
+output: html_document
+---
+
+Use this notebook to perform differential expression and all other post-DE
+analyses. 

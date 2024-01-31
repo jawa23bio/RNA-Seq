@@ -1,0 +1,33 @@
+# we have given you the rules you will need to fill out remember when structuring your dependencies, 
+# we are only downloading the GTF and genome.fa, we will not be doing anything further with them this week
+
+rule all:
+	input:
+
+rule get_m39:
+	output:
+	params:
+	shell:
+		'''
+		'''
+
+rule get_m39_gtf:
+	output:
+	params:
+	shell:
+		'''
+		'''
+
+# make sure to read up on how STAR names it output files	
+rule star:
+	input:
+	output:	
+	params:
+	shell:
+		'''
+		'''
+
+rule samtools_flagstat:
+	input:
+	output:
+	shell:

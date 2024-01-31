@@ -1,0 +1,27 @@
+---
+title: "Week 2 Notebook"
+output: html_document
+---
+
+
+Do your best to write in the style of a scientific publication.
+We will spend some time in class discussing some general conventions
+and guidelines for scientific writing. 
+
+# Write your methods for this week in the following space:
+
+
+
+
+
+# Write your results for this week in the following space:
+
+
+```{r, if you need any code blocks, you can instantiate them like this}
+
+
+```
+
+
+# Conceptual Questions
+
