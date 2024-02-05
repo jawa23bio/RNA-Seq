@@ -1,0 +1,4 @@
+Building DAG of jobs...
+WildcardError in rule multiqc in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week1.snake, line 25:
+Wildcards in input files cannot be determined from output files: (rule multiqc, line 49, /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week1.snake)
+'name'

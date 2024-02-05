@@ -1,0 +1,242 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+all            1
+fastqc        16
+multiqc        1
+total         18
+
+Select jobs to execute...
+Execute 16 jobs...
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P0rep1subsample_R1.fastq.gz
+    output: results/P0rep1subsample_R1_fastqc.html
+    jobid: 6
+    reason: Missing output files: results/P0rep1subsample_R1_fastqc.html
+    wildcards: sample=P0rep, rep=1, number=1
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P0rep2subsample_R1.fastq.gz
+    output: results/P0rep2subsample_R1_fastqc.html
+    jobid: 8
+    reason: Missing output files: results/P0rep2subsample_R1_fastqc.html
+    wildcards: sample=P0rep, rep=2, number=1
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P4rep1subsample_R1.fastq.gz
+    output: results/P4rep1subsample_R1_fastqc.html
+    jobid: 10
+    reason: Missing output files: results/P4rep1subsample_R1_fastqc.html
+    wildcards: sample=P4rep, rep=1, number=1
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P4rep2subsample_R1.fastq.gz
+    output: results/P4rep2subsample_R1_fastqc.html
+    jobid: 12
+    reason: Missing output files: results/P4rep2subsample_R1_fastqc.html
+    wildcards: sample=P4rep, rep=2, number=1
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/ADrep2subsample_R1.fastq.gz
+    output: results/ADrep2subsample_R1_fastqc.html
+    jobid: 4
+    reason: Missing output files: results/ADrep2subsample_R1_fastqc.html
+    wildcards: sample=ADrep, rep=2, number=1
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P7rep1subsample_R1.fastq.gz
+    output: results/P7rep1subsample_R1_fastqc.html
+    jobid: 14
+    reason: Missing output files: results/P7rep1subsample_R1_fastqc.html
+    wildcards: sample=P7rep, rep=1, number=1
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P7rep2subsample_R1.fastq.gz
+    output: results/P7rep2subsample_R1_fastqc.html
+    jobid: 16
+    reason: Missing output files: results/P7rep2subsample_R1_fastqc.html
+    wildcards: sample=P7rep, rep=2, number=1
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P7rep2subsample_R2.fastq.gz
+    output: results/P7rep2subsample_R2_fastqc.html
+    jobid: 17
+    reason: Missing output files: results/P7rep2subsample_R2_fastqc.html
+    wildcards: sample=P7rep, rep=2, number=2
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/ADrep1subsample_R1.fastq.gz
+    output: results/ADrep1subsample_R1_fastqc.html
+    jobid: 2
+    reason: Missing output files: results/ADrep1subsample_R1_fastqc.html
+    wildcards: sample=ADrep, rep=1, number=1
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/ADrep1subsample_R2.fastq.gz
+    output: results/ADrep1subsample_R2_fastqc.html
+    jobid: 3
+    reason: Missing output files: results/ADrep1subsample_R2_fastqc.html
+    wildcards: sample=ADrep, rep=1, number=2
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/ADrep2subsample_R2.fastq.gz
+    output: results/ADrep2subsample_R2_fastqc.html
+    jobid: 5
+    reason: Missing output files: results/ADrep2subsample_R2_fastqc.html
+    wildcards: sample=ADrep, rep=2, number=2
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P0rep1subsample_R2.fastq.gz
+    output: results/P0rep1subsample_R2_fastqc.html
+    jobid: 7
+    reason: Missing output files: results/P0rep1subsample_R2_fastqc.html
+    wildcards: sample=P0rep, rep=1, number=2
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P0rep2subsample_R2.fastq.gz
+    output: results/P0rep2subsample_R2_fastqc.html
+    jobid: 9
+    reason: Missing output files: results/P0rep2subsample_R2_fastqc.html
+    wildcards: sample=P0rep, rep=2, number=2
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P4rep1subsample_R2.fastq.gz
+    output: results/P4rep1subsample_R2_fastqc.html
+    jobid: 11
+    reason: Missing output files: results/P4rep1subsample_R2_fastqc.html
+    wildcards: sample=P4rep, rep=1, number=2
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P4rep2subsample_R2.fastq.gz
+    output: results/P4rep2subsample_R2_fastqc.html
+    jobid: 13
+    reason: Missing output files: results/P4rep2subsample_R2_fastqc.html
+    wildcards: sample=P4rep, rep=2, number=2
+    resources: tmpdir=/scratch
+
+
+[Sun Feb  4 18:27:23 2024]
+localrule fastqc:
+    input: samples/P7rep1subsample_R2.fastq.gz
+    output: results/P7rep1subsample_R2_fastqc.html
+    jobid: 15
+    reason: Missing output files: results/P7rep1subsample_R2_fastqc.html
+    wildcards: sample=P7rep, rep=1, number=2
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 18:27:26 2024]
+Finished job 4.
+1 of 18 steps (6%) done
+[Sun Feb  4 18:27:26 2024]
+Finished job 9.
+2 of 18 steps (11%) done
+[Sun Feb  4 18:27:26 2024]
+Finished job 17.
+3 of 18 steps (17%) done
+[Sun Feb  4 18:27:26 2024]
+Finished job 13.
+4 of 18 steps (22%) done
+[Sun Feb  4 18:27:26 2024]
+Finished job 5.
+5 of 18 steps (28%) done
+[Sun Feb  4 18:27:26 2024]
+Finished job 8.
+6 of 18 steps (33%) done
+[Sun Feb  4 18:27:26 2024]
+Finished job 14.
+7 of 18 steps (39%) done
+[Sun Feb  4 18:27:26 2024]
+Finished job 6.
+8 of 18 steps (44%) done
+[Sun Feb  4 18:27:26 2024]
+Finished job 7.
+9 of 18 steps (50%) done
+[Sun Feb  4 18:27:26 2024]
+Finished job 15.
+10 of 18 steps (56%) done
+[Sun Feb  4 18:27:26 2024]
+Finished job 2.
+11 of 18 steps (61%) done
+[Sun Feb  4 18:27:26 2024]
+Finished job 10.
+12 of 18 steps (67%) done
+[Sun Feb  4 18:27:27 2024]
+Finished job 3.
+13 of 18 steps (72%) done
+[Sun Feb  4 18:27:27 2024]
+Finished job 11.
+14 of 18 steps (78%) done
+[Sun Feb  4 18:27:27 2024]
+Finished job 16.
+15 of 18 steps (83%) done
+[Sun Feb  4 18:27:27 2024]
+Finished job 12.
+16 of 18 steps (89%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 18:27:27 2024]
+localrule multiqc:
+    input: results/ADrep1subsample_R1_fastqc.html, results/ADrep1subsample_R2_fastqc.html, results/ADrep2subsample_R1_fastqc.html, results/ADrep2subsample_R2_fastqc.html, results/P0rep1subsample_R1_fastqc.html, results/P0rep1subsample_R2_fastqc.html, results/P0rep2subsample_R1_fastqc.html, results/P0rep2subsample_R2_fastqc.html, results/P4rep1subsample_R1_fastqc.html, results/P4rep1subsample_R2_fastqc.html, results/P4rep2subsample_R1_fastqc.html, results/P4rep2subsample_R2_fastqc.html, results/P7rep1subsample_R1_fastqc.html, results/P7rep1subsample_R2_fastqc.html, results/P7rep2subsample_R1_fastqc.html, results/P7rep2subsample_R2_fastqc.html
+    output: results/final_multiqc_report.html
+    jobid: 1
+    reason: Missing output files: results/final_multiqc_report.html; Input files updated by another job: results/P7rep2subsample_R1_fastqc.html, results/P4rep2subsample_R2_fastqc.html, results/P4rep1subsample_R2_fastqc.html, results/P4rep1subsample_R1_fastqc.html, results/P0rep2subsample_R1_fastqc.html, results/ADrep2subsample_R1_fastqc.html, results/ADrep1subsample_R2_fastqc.html, results/P4rep2subsample_R1_fastqc.html, results/P7rep2subsample_R2_fastqc.html, results/P7rep1subsample_R1_fastqc.html, results/ADrep1subsample_R1_fastqc.html, results/P7rep1subsample_R2_fastqc.html, results/P0rep2subsample_R2_fastqc.html, results/P0rep1subsample_R1_fastqc.html, results/ADrep2subsample_R2_fastqc.html, results/P0rep1subsample_R2_fastqc.html
+    resources: tmpdir=/scratch
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule multiqc in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week1.snake, line 25:
+Job 1  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/final_multiqc_report.html
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-04T182722.237534.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

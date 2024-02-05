@@ -1,0 +1,280 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+all            1
+fastqc        16
+multiqc        1
+total         18
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:28 2024]
+localrule fastqc:
+    input: samples/P0rep2subsample_R1.fastq.gz
+    output: results/P0rep2subsample_R1_fastqc.html
+    jobid: 8
+    reason: Missing output files: results/P0rep2subsample_R1_fastqc.html
+    wildcards: sample=P0rep, rep=2, number=1
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:32 2024]
+Finished job 8.
+1 of 18 steps (6%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:32 2024]
+localrule fastqc:
+    input: samples/ADrep2subsample_R2.fastq.gz
+    output: results/ADrep2subsample_R2_fastqc.html
+    jobid: 5
+    reason: Missing output files: results/ADrep2subsample_R2_fastqc.html
+    wildcards: sample=ADrep, rep=2, number=2
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:34 2024]
+Finished job 5.
+2 of 18 steps (11%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:35 2024]
+localrule fastqc:
+    input: samples/P0rep1subsample_R2.fastq.gz
+    output: results/P0rep1subsample_R2_fastqc.html
+    jobid: 7
+    reason: Missing output files: results/P0rep1subsample_R2_fastqc.html
+    wildcards: sample=P0rep, rep=1, number=2
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:37 2024]
+Finished job 7.
+3 of 18 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:37 2024]
+localrule fastqc:
+    input: samples/P0rep2subsample_R2.fastq.gz
+    output: results/P0rep2subsample_R2_fastqc.html
+    jobid: 9
+    reason: Missing output files: results/P0rep2subsample_R2_fastqc.html
+    wildcards: sample=P0rep, rep=2, number=2
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:39 2024]
+Finished job 9.
+4 of 18 steps (22%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:39 2024]
+localrule fastqc:
+    input: samples/P4rep1subsample_R2.fastq.gz
+    output: results/P4rep1subsample_R2_fastqc.html
+    jobid: 11
+    reason: Missing output files: results/P4rep1subsample_R2_fastqc.html
+    wildcards: sample=P4rep, rep=1, number=2
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:41 2024]
+Finished job 11.
+5 of 18 steps (28%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:42 2024]
+localrule fastqc:
+    input: samples/P4rep2subsample_R2.fastq.gz
+    output: results/P4rep2subsample_R2_fastqc.html
+    jobid: 13
+    reason: Missing output files: results/P4rep2subsample_R2_fastqc.html
+    wildcards: sample=P4rep, rep=2, number=2
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:44 2024]
+Finished job 13.
+6 of 18 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:44 2024]
+localrule fastqc:
+    input: samples/P7rep1subsample_R2.fastq.gz
+    output: results/P7rep1subsample_R2_fastqc.html
+    jobid: 15
+    reason: Missing output files: results/P7rep1subsample_R2_fastqc.html
+    wildcards: sample=P7rep, rep=1, number=2
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:46 2024]
+Finished job 15.
+7 of 18 steps (39%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:46 2024]
+localrule fastqc:
+    input: samples/ADrep1subsample_R2.fastq.gz
+    output: results/ADrep1subsample_R2_fastqc.html
+    jobid: 3
+    reason: Missing output files: results/ADrep1subsample_R2_fastqc.html
+    wildcards: sample=ADrep, rep=1, number=2
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:49 2024]
+Finished job 3.
+8 of 18 steps (44%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:49 2024]
+localrule fastqc:
+    input: samples/ADrep1subsample_R1.fastq.gz
+    output: results/ADrep1subsample_R1_fastqc.html
+    jobid: 2
+    reason: Missing output files: results/ADrep1subsample_R1_fastqc.html
+    wildcards: sample=ADrep, rep=1, number=1
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:51 2024]
+Finished job 2.
+9 of 18 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:51 2024]
+localrule fastqc:
+    input: samples/P7rep2subsample_R2.fastq.gz
+    output: results/P7rep2subsample_R2_fastqc.html
+    jobid: 17
+    reason: Missing output files: results/P7rep2subsample_R2_fastqc.html
+    wildcards: sample=P7rep, rep=2, number=2
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:53 2024]
+Finished job 17.
+10 of 18 steps (56%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:53 2024]
+localrule fastqc:
+    input: samples/P7rep1subsample_R1.fastq.gz
+    output: results/P7rep1subsample_R1_fastqc.html
+    jobid: 14
+    reason: Missing output files: results/P7rep1subsample_R1_fastqc.html
+    wildcards: sample=P7rep, rep=1, number=1
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:56 2024]
+Finished job 14.
+11 of 18 steps (61%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:56 2024]
+localrule fastqc:
+    input: samples/P7rep2subsample_R1.fastq.gz
+    output: results/P7rep2subsample_R1_fastqc.html
+    jobid: 16
+    reason: Missing output files: results/P7rep2subsample_R1_fastqc.html
+    wildcards: sample=P7rep, rep=2, number=1
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:57:58 2024]
+Finished job 16.
+12 of 18 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:57:58 2024]
+localrule fastqc:
+    input: samples/P4rep2subsample_R1.fastq.gz
+    output: results/P4rep2subsample_R1_fastqc.html
+    jobid: 12
+    reason: Missing output files: results/P4rep2subsample_R1_fastqc.html
+    wildcards: sample=P4rep, rep=2, number=1
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:58:00 2024]
+Finished job 12.
+13 of 18 steps (72%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:58:00 2024]
+localrule fastqc:
+    input: samples/ADrep2subsample_R1.fastq.gz
+    output: results/ADrep2subsample_R1_fastqc.html
+    jobid: 4
+    reason: Missing output files: results/ADrep2subsample_R1_fastqc.html
+    wildcards: sample=ADrep, rep=2, number=1
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:58:03 2024]
+Finished job 4.
+14 of 18 steps (78%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:58:03 2024]
+localrule fastqc:
+    input: samples/P4rep1subsample_R1.fastq.gz
+    output: results/P4rep1subsample_R1_fastqc.html
+    jobid: 10
+    reason: Missing output files: results/P4rep1subsample_R1_fastqc.html
+    wildcards: sample=P4rep, rep=1, number=1
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:58:05 2024]
+Finished job 10.
+15 of 18 steps (83%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:58:05 2024]
+localrule fastqc:
+    input: samples/P0rep1subsample_R1.fastq.gz
+    output: results/P0rep1subsample_R1_fastqc.html
+    jobid: 6
+    reason: Missing output files: results/P0rep1subsample_R1_fastqc.html
+    wildcards: sample=P0rep, rep=1, number=1
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:58:07 2024]
+Finished job 6.
+16 of 18 steps (89%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:58:07 2024]
+localrule multiqc:
+    input: results/ADrep1subsample_R1_fastqc.html, results/ADrep1subsample_R2_fastqc.html, results/ADrep2subsample_R1_fastqc.html, results/ADrep2subsample_R2_fastqc.html, results/P0rep1subsample_R1_fastqc.html, results/P0rep1subsample_R2_fastqc.html, results/P0rep2subsample_R1_fastqc.html, results/P0rep2subsample_R2_fastqc.html, results/P4rep1subsample_R1_fastqc.html, results/P4rep1subsample_R2_fastqc.html, results/P4rep2subsample_R1_fastqc.html, results/P4rep2subsample_R2_fastqc.html, results/P7rep1subsample_R1_fastqc.html, results/P7rep1subsample_R2_fastqc.html, results/P7rep2subsample_R1_fastqc.html, results/P7rep2subsample_R2_fastqc.html
+    output: results/multiqc_report.html
+    jobid: 1
+    reason: Missing output files: results/multiqc_report.html; Input files updated by another job: results/ADrep1subsample_R1_fastqc.html, results/P4rep1subsample_R2_fastqc.html, results/P7rep2subsample_R1_fastqc.html, results/P7rep2subsample_R2_fastqc.html, results/ADrep2subsample_R2_fastqc.html, results/P0rep2subsample_R1_fastqc.html, results/ADrep2subsample_R1_fastqc.html, results/P7rep1subsample_R2_fastqc.html, results/P0rep1subsample_R1_fastqc.html, results/P4rep1subsample_R1_fastqc.html, results/P0rep1subsample_R2_fastqc.html, results/ADrep1subsample_R2_fastqc.html, results/P4rep2subsample_R2_fastqc.html, results/P7rep1subsample_R1_fastqc.html, results/P4rep2subsample_R1_fastqc.html, results/P0rep2subsample_R2_fastqc.html
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:58:14 2024]
+Finished job 1.
+17 of 18 steps (94%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 22:58:14 2024]
+localrule all:
+    input: results/multiqc_report.html
+    jobid: 0
+    reason: Input files updated by another job: results/multiqc_report.html
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 22:58:14 2024]
+Finished job 0.
+18 of 18 steps (100%) done
+Complete log: .snakemake/log/2024-02-04T225728.150272.snakemake.log

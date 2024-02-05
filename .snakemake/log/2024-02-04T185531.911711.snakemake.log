@@ -1,0 +1,21 @@
+Building DAG of jobs...
+MissingInputException in rule multiqc in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week1.snake, line 25:
+Missing input files for rule multiqc:
+    output: results/final_multiqc_report.html
+    affected files:
+        results/ADrep2subsample_R1.fastqc.html
+        results/P4rep2subsample_R2.fastqc.html
+        results/P7rep1subsample_R1.fastqc.html
+        results/P4rep1subsample_R2.fastqc.html
+        results/P7rep1subsample_R2.fastqc.html
+        results/P0rep1subsample_R1.fastqc.html
+        results/P4rep2subsample_R1.fastqc.html
+        results/ADrep2subsample_R2.fastqc.html
+        results/ADrep1subsample_R1.fastqc.html
+        results/P4rep1subsample_R1.fastqc.html
+        results/P0rep2subsample_R1.fastqc.html
+        results/P7rep2subsample_R1.fastqc.html
+        results/P7rep2subsample_R2.fastqc.html
+        results/P0rep2subsample_R2.fastqc.html
+        results/P0rep1subsample_R2.fastqc.html
+        results/ADrep1subsample_R2.fastqc.html

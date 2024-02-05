@@ -1,0 +1,31 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+all            1
+multiqc        1
+total          2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 19:11:20 2024]
+localrule multiqc:
+    input: results/ADrep1subsample_R1_fastqc.html, results/ADrep1subsample_R2_fastqc.html, results/ADrep2subsample_R1_fastqc.html, results/ADrep2subsample_R2_fastqc.html, results/P0rep1subsample_R1_fastqc.html, results/P0rep1subsample_R2_fastqc.html, results/P0rep2subsample_R1_fastqc.html, results/P0rep2subsample_R2_fastqc.html, results/P4rep1subsample_R1_fastqc.html, results/P4rep1subsample_R2_fastqc.html, results/P4rep2subsample_R1_fastqc.html, results/P4rep2subsample_R2_fastqc.html, results/P7rep1subsample_R1_fastqc.html, results/P7rep1subsample_R2_fastqc.html, results/P7rep2subsample_R1_fastqc.html, results/P7rep2subsample_R2_fastqc.html
+    output: results/multiqc_report.html
+    jobid: 1
+    reason: Missing output files: results/multiqc_report.html
+    resources: tmpdir=/scratch
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule multiqc in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week1.snake, line 25:
+Job 1  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/multiqc_report.html
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-04T191119.772782.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

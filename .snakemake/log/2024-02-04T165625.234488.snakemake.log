@@ -1,0 +1,37 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+all            1
+multiqc        1
+total          2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 16:56:25 2024]
+localrule multiqc:
+    input: results/ADrep1subsample_R1_fastqc.html, results/ADrep2subsample_R2_fastqc.html, results/P0rep1subsample_R1_fastqc.html, results/P0rep2subsample_R2_fastqc.html, results/P4rep1subsample_R1_fastqc.html, results/P4rep2subsample_R2_fastqc.html, results/P7rep1subsample_R1_fastqc.html, results/P7rep2subsample_R2_fastqc.html
+    output: results/final_multiqc_report.html
+    jobid: 1
+    reason: Missing output files: results/final_multiqc_report.html
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 16:56:25 2024]
+Error in rule multiqc:
+    jobid: 1
+    input: results/ADrep1subsample_R1_fastqc.html, results/ADrep2subsample_R2_fastqc.html, results/P0rep1subsample_R1_fastqc.html, results/P0rep2subsample_R2_fastqc.html, results/P4rep1subsample_R1_fastqc.html, results/P4rep2subsample_R2_fastqc.html, results/P7rep1subsample_R1_fastqc.html, results/P7rep2subsample_R2_fastqc.html
+    output: results/final_multiqc_report.html
+    shell:
+        multiqc results/ -o results/
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-04T165625.234488.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

@@ -1,0 +1,39 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+all            1
+fastqc         8
+multiqc        1
+total         10
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb  4 16:42:26 2024]
+localrule fastqc:
+    input: samples/P7rep2subsample_R2.fastq.gz
+    output: results/P7rep2subsample_R2.fastqc.html
+    jobid: 9
+    reason: Missing output files: results/P7rep2subsample_R2.fastqc.html
+    wildcards: sample=P7, number=2
+    resources: tmpdir=/scratch
+
+[Sun Feb  4 16:42:26 2024]
+Error in rule fastqc:
+    jobid: 9
+    input: samples/P7rep2subsample_R2.fastq.gz
+    output: results/P7rep2subsample_R2.fastqc.html
+    shell:
+        fastqc samples/P7rep2subsample_R2.fastq.gz > results/results/P7rep2subsample_R2.fastqc.html
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-04T164226.642970.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

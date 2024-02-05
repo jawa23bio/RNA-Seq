@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in rule all in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week1.snake, line 6:
+Missing input files for rule all:
+    affected files:
+        results/final_multiqc_report.html
