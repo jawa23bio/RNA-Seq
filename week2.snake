@@ -11,8 +11,6 @@ rule all:
 rule get_m39:
 	output:
 		'results/GRCm39.fa.gz'
-	params:
-		outdir = 'results/GRCm39.fa'
 	shell:
 		'''
 		wget -O {output} https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M34/GRCm39.primary_assembly.genome.fa.gz

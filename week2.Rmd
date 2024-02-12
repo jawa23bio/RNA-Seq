@@ -10,12 +10,51 @@ and guidelines for scientific writing.
 
 # Write your methods for this week in the following space:
 
+In this week's assignment, a computational workflow utilizing the Snakemake framework was employed to analyze high-throughput sequencing data and assess the alignment quality of mouse RNA-seq samples against the GRCm39 reference genome. 
+The following methodological steps were executed to achieve this objective.
 
+## Rule All: File Expansion and Organization
+In the rule `all`, the Snakemake `expand` function was employed to systematically generate a comprehensive list of target files. This list encompassed all resulting `.bam` files produced after aligning the RNA-seq samples using the STAR aligner. 
+Additionally, the `expand` function was employed for the generation of corresponding `.txt` files, encapsulating the alignment metrics obtained from the SAMtools flagstat utility. This approach facilitated the structured organization and retrieval of essential output files.
 
+## Data Retrieval
+To obtain the mouse reference genome (GRCm39) and gene annotation file in GTF format, the GENCODE database was used. The `wget` function was utilized to download the genome in FASTA format (`GRCm39.fa.gz`). Similarly, the gene annotation file (.gtf) was retrieved using the `wget` command. 
+Subsequently, the `gunzip` command was applied to unzip the GTF file, preserving both zipped and unzipped formats in the results directory.
 
+## STAR Alignment
+The STAR aligner was employed for the alignment of RNA-seq samples to the GRCm39 reference genome. To facilitate this, a generic expression was utilized to input zipped fastq sample files. The `m39_subset_star` directory served as the Genome_index. Given STAR's inability to process zipped FASTA or FASTQ files, the `zcat` command was employed in the `readFilesCommand` function to convert the zipped fastq files to the required format. 
+Output from STAR was configured to generate Unsorted BAM files (`Aligned.out.bam`). The resulting files were meticulously organized, employing the `outFileNamePrefix` function to save each aligned file in with the appropriate sample name within the results folder.
+
+## Post-Alignment Quality Control
+Post-alignment quality control was performed using the SAMtools flagstat utility. This tool processed the output `.bam` files from STAR, generating comprehensive alignment statistics. The resulting metrics were saved in corresponding `.txt` files for subsequent analysis.
 
 # Write your results for this week in the following space:
 
+## Reference Genome and Gene Annotation
+The GRCm39 reference genome and gene annotation file were successfully retrieved from the GENCODE database. The `GRCm39.fa.gz` file was saved in the results directory in compressed format, while the gene annotation file (`m39_GA.gtf`) was stored in both compressed and uncompressed formats.
+
+## STAR Alignment Outputs
+Upon running STAR, a multitude of temporary files were generated, providing insights into the alignment process. In addition to the primary output files in BAM format (`Aligned.out.bam`), numerous `.log` files were created, offering detailed information on the execution of each alignment job.
+
+## Quality Control Assessment
+The SAMtools flagstat utility was employed to assess the quality of the alignment. The resulting `.txt` files comprehensively documented the alignment details for each sample. Notably, all samples exhibited reads that passed quality control and were appropriately categorized between primary and secondary alignments.
+
+# Results
+
+## Reference Genome and Gene Annotation
+
+The GRCm39 reference genome and gene annotation file were successfully retrieved from the GENCODE database. The `GRCm39.fa.gz` file was saved in the results directory in compressed format, while the gene annotation file (`m39_GA.gtf`) was stored in both compressed and uncompressed formats.
+
+## STAR Alignment Outputs
+
+Upon running STAR, a multitude of temporary files were generated, providing insights into the alignment process. In addition to the primary output files in BAM format (`Aligned.out.bam`), numerous `.log` files were created, offering detailed information on the execution of each alignment job.
+
+## Quality Control Assessment
+
+The SAMtools flagstat utility was employed to assess the quality of the alignment. The resulting `.txt` files comprehensively documented the alignment details for each sample. Notably, all samples exhibited reads that passed quality control and were appropriately categorized between primary and secondary alignments.
+
+The successful execution of the Snakemake workflow, from data retrieval to post-alignment quality control, ensures a robust and systematic analysis of RNA-seq data against the GRCm39 reference genome. 
+These findings lay the foundation for subsequent downstream analyses and interpretation.
 
 ```{r, if you need any code blocks, you can instantiate them like this}
 
