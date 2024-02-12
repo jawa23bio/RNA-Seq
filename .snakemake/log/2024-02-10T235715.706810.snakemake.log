@@ -1,0 +1,39 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+samtools_flagstat        1
+star                     1
+total                    3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 23:57:16 2024]
+localrule star:
+    input: samples/Sample_Fastq/ADrep1subsample_R1.fastq.gz, samples/Sample_Fastq/ADrep1subsample_R2.fastq.gz, samples/Sample_Fastq/ADrep2subsample_R1.fastq.gz, samples/Sample_Fastq/ADrep2subsample_R2.fastq.gz, samples/Sample_Fastq/P0rep1subsample_R1.fastq.gz, samples/Sample_Fastq/P0rep1subsample_R2.fastq.gz, samples/Sample_Fastq/P0rep2subsample_R1.fastq.gz, samples/Sample_Fastq/P0rep2subsample_R2.fastq.gz, samples/Sample_Fastq/P4rep1subsample_R1.fastq.gz, samples/Sample_Fastq/P4rep1subsample_R2.fastq.gz, samples/Sample_Fastq/P4rep2subsample_R1.fastq.gz, samples/Sample_Fastq/P4rep2subsample_R2.fastq.gz, samples/Sample_Fastq/P7rep1subsample_R1.fastq.gz, samples/Sample_Fastq/P7rep1subsample_R2.fastq.gz, samples/Sample_Fastq/P7rep2subsample_R1.fastq.gz, samples/Sample_Fastq/P7rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/ADrep1subsample_R1Aligned.out.bam, results/ADrep1subsample_R2Aligned.out.bam, results/ADrep2subsample_R1Aligned.out.bam, results/ADrep2subsample_R2Aligned.out.bam, results/P0rep1subsample_R1Aligned.out.bam, results/P0rep1subsample_R2Aligned.out.bam, results/P0rep2subsample_R1Aligned.out.bam, results/P0rep2subsample_R2Aligned.out.bam, results/P4rep1subsample_R1Aligned.out.bam, results/P4rep1subsample_R2Aligned.out.bam, results/P4rep2subsample_R1Aligned.out.bam, results/P4rep2subsample_R2Aligned.out.bam, results/P7rep1subsample_R1Aligned.out.bam, results/P7rep1subsample_R2Aligned.out.bam, results/P7rep2subsample_R1Aligned.out.bam, results/P7rep2subsample_R2Aligned.out.bam
+    jobid: 1
+    reason: Missing output files: results/P0rep1subsample_R1Aligned.out.bam, results/P0rep1subsample_R2Aligned.out.bam, results/ADrep2subsample_R1Aligned.out.bam, results/P7rep1subsample_R2Aligned.out.bam, results/P0rep2subsample_R2Aligned.out.bam, results/ADrep1subsample_R1Aligned.out.bam, results/P0rep2subsample_R1Aligned.out.bam, results/P4rep1subsample_R1Aligned.out.bam, results/P4rep2subsample_R2Aligned.out.bam, results/P7rep1subsample_R1Aligned.out.bam, results/P7rep2subsample_R1Aligned.out.bam, results/ADrep1subsample_R2Aligned.out.bam, results/ADrep2subsample_R2Aligned.out.bam, results/P7rep2subsample_R2Aligned.out.bam, results/P4rep1subsample_R2Aligned.out.bam, results/P4rep2subsample_R1Aligned.out.bam
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+[Sat Feb 10 23:57:16 2024]
+Error in rule star:
+    jobid: 1
+    input: samples/Sample_Fastq/ADrep1subsample_R1.fastq.gz, samples/Sample_Fastq/ADrep1subsample_R2.fastq.gz, samples/Sample_Fastq/ADrep2subsample_R1.fastq.gz, samples/Sample_Fastq/ADrep2subsample_R2.fastq.gz, samples/Sample_Fastq/P0rep1subsample_R1.fastq.gz, samples/Sample_Fastq/P0rep1subsample_R2.fastq.gz, samples/Sample_Fastq/P0rep2subsample_R1.fastq.gz, samples/Sample_Fastq/P0rep2subsample_R2.fastq.gz, samples/Sample_Fastq/P4rep1subsample_R1.fastq.gz, samples/Sample_Fastq/P4rep1subsample_R2.fastq.gz, samples/Sample_Fastq/P4rep2subsample_R1.fastq.gz, samples/Sample_Fastq/P4rep2subsample_R2.fastq.gz, samples/Sample_Fastq/P7rep1subsample_R1.fastq.gz, samples/Sample_Fastq/P7rep1subsample_R2.fastq.gz, samples/Sample_Fastq/P7rep2subsample_R1.fastq.gz, samples/Sample_Fastq/P7rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/ADrep1subsample_R1Aligned.out.bam, results/ADrep1subsample_R2Aligned.out.bam, results/ADrep2subsample_R1Aligned.out.bam, results/ADrep2subsample_R2Aligned.out.bam, results/P0rep1subsample_R1Aligned.out.bam, results/P0rep1subsample_R2Aligned.out.bam, results/P0rep2subsample_R1Aligned.out.bam, results/P0rep2subsample_R2Aligned.out.bam, results/P4rep1subsample_R1Aligned.out.bam, results/P4rep1subsample_R2Aligned.out.bam, results/P4rep2subsample_R1Aligned.out.bam, results/P4rep2subsample_R2Aligned.out.bam, results/P7rep1subsample_R1Aligned.out.bam, results/P7rep1subsample_R2Aligned.out.bam, results/P7rep2subsample_R1Aligned.out.bam, results/P7rep2subsample_R2Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/Sample_Fastq/ADrep1subsample_R1.fastq.gz samples/Sample_Fastq/ADrep1subsample_R2.fastq.gz samples/Sample_Fastq/ADrep2subsample_R1.fastq.gz samples/Sample_Fastq/ADrep2subsample_R2.fastq.gz samples/Sample_Fastq/P0rep1subsample_R1.fastq.gz samples/Sample_Fastq/P0rep1subsample_R2.fastq.gz samples/Sample_Fastq/P0rep2subsample_R1.fastq.gz samples/Sample_Fastq/P0rep2subsample_R2.fastq.gz samples/Sample_Fastq/P4rep1subsample_R1.fastq.gz samples/Sample_Fastq/P4rep1subsample_R2.fastq.gz samples/Sample_Fastq/P4rep2subsample_R1.fastq.gz samples/Sample_Fastq/P4rep2subsample_R2.fastq.gz samples/Sample_Fastq/P7rep1subsample_R1.fastq.gz samples/Sample_Fastq/P7rep1subsample_R2.fastq.gz samples/Sample_Fastq/P7rep2subsample_R1.fastq.gz samples/Sample_Fastq/P7rep2subsample_R2.fastq.gz  --outSAMtype BAM Unsorted --outFileNamePrefix ./
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-10T235715.706810.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

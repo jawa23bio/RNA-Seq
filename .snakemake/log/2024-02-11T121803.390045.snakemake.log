@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+star         1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 12:18:03 2024]
+localrule star:
+    input: samples/Sample_Fastq/ADrep1subsample_R1.fastq.gz, samples/Sample_Fastq/ADrep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/Aligned.out.bam
+    jobid: 0
+    reason: Missing output files: results/BAMResults/Aligned.out.bam
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 12:18:05 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2024-02-11T121803.390045.snakemake.log

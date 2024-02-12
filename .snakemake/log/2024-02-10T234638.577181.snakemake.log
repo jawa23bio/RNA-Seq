@@ -1,0 +1,21 @@
+Building DAG of jobs...
+MissingInputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Missing input files for rule star:
+    output: results/ADrep1subsample_R1Aligned.out.bam, results/ADrep1subsample_R2Aligned.out.bam, results/ADrep2subsample_R1Aligned.out.bam, results/ADrep2subsample_R2Aligned.out.bam, results/P0rep1subsample_R1Aligned.out.bam, results/P0rep1subsample_R2Aligned.out.bam, results/P0rep2subsample_R1Aligned.out.bam, results/P0rep2subsample_R2Aligned.out.bam, results/P4rep1subsample_R1Aligned.out.bam, results/P4rep1subsample_R2Aligned.out.bam, results/P4rep2subsample_R1Aligned.out.bam, results/P4rep2subsample_R2Aligned.out.bam, results/P7rep1subsample_R1Aligned.out.bam, results/P7rep1subsample_R2Aligned.out.bam, results/P7rep2subsample_R1Aligned.out.bam, results/P7rep2subsample_R2Aligned.out.bam
+    affected files:
+        samples/sample_Fastq/P0rep2subsample_R1.fastq.gz
+        samples/sample_Fastq/ADrep1subsample_R2.fastq.gz
+        samples/sample_Fastq/P7rep1subsample_R1.fastq.gz
+        samples/sample_Fastq/ADrep2subsample_R1.fastq.gz
+        samples/sample_Fastq/P4rep2subsample_R1.fastq.gz
+        samples/sample_Fastq/P4rep1subsample_R2.fastq.gz
+        samples/sample_Fastq/P4rep1subsample_R1.fastq.gz
+        samples/sample_Fastq/ADrep1subsample_R1.fastq.gz
+        samples/sample_Fastq/P7rep2subsample_R1.fastq.gz
+        samples/sample_Fastq/ADrep2subsample_R2.fastq.gz
+        samples/sample_Fastq/P4rep2subsample_R2.fastq.gz
+        samples/sample_Fastq/P7rep1subsample_R2.fastq.gz
+        samples/sample_Fastq/P0rep2subsample_R2.fastq.gz
+        samples/sample_Fastq/P7rep2subsample_R2.fastq.gz
+        samples/sample_Fastq/P0rep1subsample_R1.fastq.gz
+        samples/sample_Fastq/P0rep1subsample_R2.fastq.gz

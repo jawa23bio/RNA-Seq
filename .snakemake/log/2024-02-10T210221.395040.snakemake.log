@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+samtools_flagstat        1
+star                    15
+total                   17
+
+Select jobs to execute...
+Execute 15 jobs...
+
+[Sat Feb 10 21:02:22 2024]
+localrule star:
+    input: samples/ADrep1subsample_R1.fastq.gz, samples/ADrep1subsample_R2.fastq.gz, samples/ADrep2subsample_R1.fastq.gz, samples/ADrep2subsample_R2.fastq.gz, samples/P0rep1subsample_R1.fastq.gz, samples/P0rep1subsample_R2.fastq.gz, samples/P0rep2subsample_R1.fastq.gz, samples/P0rep2subsample_R2.fastq.gz, samples/P4rep1subsample_R1.fastq.gz, samples/P4rep1subsample_R2.fastq.gz, samples/P4rep2subsample_R1.fastq.gz, samples/P4rep2subsample_R2.fastq.gz, samples/P7rep1subsample_R1.fastq.gz, samples/P7rep1subsample_R2.fastq.gz, samples/P7rep2subsample_R1.fastq.gz, samples/P7rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/ADrep2subsample_R2Aligned.out.bam
+    jobid: 4
+    reason: Missing output files: results/ADrep2subsample_R2Aligned.out.bam
+    wildcards: sample=ADrep, rep=2, number=2
+    resources: tmpdir=/scratch/4448454.1.academic-gpu
+
+RuleException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+NameError: The name "' '" is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}, when formatting the following:
+
+		STAR --genomeDir {input.Genome_index}/ --readFilesCommand zcat --readFilesIn {' '.join(input.fastq)} --outSAMtype BAM Unsorted --outFileNamePrefix {params.outdir}
+		

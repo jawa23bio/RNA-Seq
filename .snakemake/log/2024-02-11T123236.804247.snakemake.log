@@ -1,0 +1,53 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+all          1
+star         2
+total        3
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Sun Feb 11 12:32:36 2024]
+localrule star:
+    input: samples/Sample_Fastq/ADrep1subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/ADrep1subsample_R1.Aligned.out.bam
+    jobid: 1
+    reason: Missing output files: results/BAMResults/ADrep1subsample_R1.Aligned.out.bam
+    wildcards: sample=ADrep1subsample_R1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 12:32:36 2024]
+localrule star:
+    input: samples/Sample_Fastq/ADrep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/ADrep1subsample_R2.Aligned.out.bam
+    jobid: 2
+    reason: Missing output files: results/BAMResults/ADrep1subsample_R2.Aligned.out.bam
+    wildcards: sample=ADrep1subsample_R2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 12:32:36 2024]
+Error in rule star:
+    jobid: 2
+    input: samples/Sample_Fastq/ADrep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/ADrep1subsample_R2.Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/Sample_Fastq/ADrep1subsample_R2.fastq.gz  --outSAMtype BAM Unsorted --outFileNamePrefix results/BAMResults/
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/snake_check, line 8:
+Job 1  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/BAMResults/ADrep1subsample_R1.Aligned.out.bam
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-11T123236.804247.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

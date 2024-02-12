@@ -1,0 +1,28 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+all          1
+star         3
+total        4
+
+Select jobs to execute...
+Execute 3 jobs...
+
+[Sun Feb 11 18:28:13 2024]
+localrule star:
+    input: samples/Sample_Fastq/ADrep1subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/ADrep1subsample_R1.Aligned.out.bam
+    jobid: 1
+    reason: Missing output files: results/BAMResults/ADrep1subsample_R1.Aligned.out.bam
+    wildcards: sample=ADrep1subsample_R1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+RuleException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/snake_check, line 8:
+AttributeError: 'Wildcards' object has no attribute 'samples', when formatting the following:
+
+		STAR --genomeDir {input.Genome_index}/ --readFilesCommand zcat --readFilesIn {input.fastq1} --outSAMtype BAM Unsorted --outFileNamePrefix {params.outdir}/{wildcards.samples}
+		

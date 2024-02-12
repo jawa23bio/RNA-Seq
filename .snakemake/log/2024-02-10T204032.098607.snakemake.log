@@ -1,0 +1,21 @@
+Building DAG of jobs...
+MissingInputException in rule samtools_flagstat in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 46:
+Missing input files for rule samtools_flagstat:
+    output: results/ADrep1subsample_R1.txt, results/ADrep1subsample_R2.txt, results/ADrep2subsample_R1.txt, results/ADrep2subsample_R2.txt, results/P0rep1subsample_R1.txt, results/P0rep1subsample_R2.txt, results/P0rep2subsample_R1.txt, results/P0rep2subsample_R2.txt, results/P4rep1subsample_R1.txt, results/P4rep1subsample_R2.txt, results/P4rep2subsample_R1.txt, results/P4rep2subsample_R2.txt, results/P7rep1subsample_R1.txt, results/P7rep1subsample_R2.txt, results/P7rep2subsample_R1.txt, results/P7rep2subsample_R2.txt
+    affected files:
+        results/ADrep2subsample_R2.bam
+        results/P0rep2subsample_R2.bam
+        results/P0rep1subsample_R2.bam
+        results/P0rep2subsample_R1.bam
+        results/P4rep2subsample_R2.bam
+        results/P0rep1subsample_R1.bam
+        results/P7rep1subsample_R1.bam
+        results/P7rep2subsample_R1.bam
+        results/P7rep2subsample_R2.bam
+        results/P4rep2subsample_R1.bam
+        results/ADrep1subsample_R1.bam
+        results/P7rep1subsample_R2.bam
+        results/ADrep1subsample_R2.bam
+        results/P4rep1subsample_R1.bam
+        results/P4rep1subsample_R2.bam
+        results/ADrep2subsample_R1.bam

@@ -1,0 +1,249 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+all          1
+star        13
+total       14
+
+Select jobs to execute...
+Execute 13 jobs...
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/P0rep2subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P0rep2subsample_R1Aligned.out.bam
+    jobid: 7
+    reason: Missing output files: results/BAMResults/P0rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P0rep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/P4rep1subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P4rep1subsample_R1Aligned.out.bam
+    jobid: 9
+    reason: Missing output files: results/BAMResults/P4rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P4rep, rep=1, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/P4rep2subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P4rep2subsample_R1Aligned.out.bam
+    jobid: 11
+    reason: Missing output files: results/BAMResults/P4rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P4rep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/P0rep1subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P0rep1subsample_R1Aligned.out.bam
+    jobid: 5
+    reason: Missing output files: results/BAMResults/P0rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P0rep, rep=1, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/ADrep2subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/ADrep2subsample_R1Aligned.out.bam
+    jobid: 3
+    reason: Missing output files: results/BAMResults/ADrep2subsample_R1Aligned.out.bam
+    wildcards: sample=ADrep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/P7rep1subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P7rep1subsample_R1Aligned.out.bam
+    jobid: 13
+    reason: Missing output files: results/BAMResults/P7rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P7rep, rep=1, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/P7rep2subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P7rep2subsample_R1Aligned.out.bam
+    jobid: 15
+    reason: Missing output files: results/BAMResults/P7rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P7rep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/ADrep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/ADrep2subsample_R2Aligned.out.bam
+    jobid: 4
+    reason: Missing output files: results/BAMResults/ADrep2subsample_R2Aligned.out.bam
+    wildcards: sample=ADrep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/P0rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P0rep2subsample_R2Aligned.out.bam
+    jobid: 8
+    reason: Missing output files: results/BAMResults/P0rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P0rep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/P4rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P4rep1subsample_R2Aligned.out.bam
+    jobid: 10
+    reason: Missing output files: results/BAMResults/P4rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P4rep, rep=1, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/P4rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P4rep2subsample_R2Aligned.out.bam
+    jobid: 12
+    reason: Missing output files: results/BAMResults/P4rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P4rep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/P7rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P7rep1subsample_R2Aligned.out.bam
+    jobid: 14
+    reason: Missing output files: results/BAMResults/P7rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P7rep, rep=1, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 18:44:04 2024]
+localrule star:
+    input: samples/Sample_Fastq/P7rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P7rep2subsample_R2Aligned.out.bam
+    jobid: 16
+    reason: Missing output files: results/BAMResults/P7rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P7rep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 18:44:04 2024]
+Error in rule star:
+    jobid: 11
+    input: samples/Sample_Fastq/P4rep2subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P4rep2subsample_R1Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/Sample_Fastq/P4rep2subsample_R1.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results/BAMResults//P4rep
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Feb 11 18:44:04 2024]
+Error in rule star:
+    jobid: 5
+    input: samples/Sample_Fastq/P0rep1subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P0rep1subsample_R1Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/Sample_Fastq/P0rep1subsample_R1.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results/BAMResults//P0rep
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Feb 11 18:44:04 2024]
+Error in rule star:
+    jobid: 3
+    input: samples/Sample_Fastq/ADrep2subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/ADrep2subsample_R1Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/Sample_Fastq/ADrep2subsample_R1.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results/BAMResults//ADrep
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Feb 11 18:44:04 2024]
+[Sun Feb 11 18:44:04 2024]
+Error in rule star:
+    jobid: 15
+    input: samples/Sample_Fastq/P7rep2subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P7rep2subsample_R1Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/Sample_Fastq/P7rep2subsample_R1.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results/BAMResults//P7rep
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule star:
+    jobid: 12
+    input: samples/Sample_Fastq/P4rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P4rep2subsample_R2Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/Sample_Fastq/P4rep2subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results/BAMResults//P4rep
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Feb 11 18:44:04 2024]
+Error in rule star:
+    jobid: 14
+    input: samples/Sample_Fastq/P7rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P7rep1subsample_R2Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/Sample_Fastq/P7rep1subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results/BAMResults//P7rep
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Feb 11 18:44:04 2024]
+Error in rule star:
+    jobid: 10
+    input: samples/Sample_Fastq/P4rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/BAMResults/P4rep1subsample_R2Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/Sample_Fastq/P4rep1subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results/BAMResults//P4rep
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/snake_check, line 8:
+Job 4  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/BAMResults/ADrep2subsample_R2Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/snake_check, line 8:
+Job 7  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/BAMResults/P0rep2subsample_R1Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/snake_check, line 8:
+Job 9  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/BAMResults/P4rep1subsample_R1Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/snake_check, line 8:
+Job 16  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/BAMResults/P7rep2subsample_R2Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/snake_check, line 8:
+Job 13  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/BAMResults/P7rep1subsample_R1Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/snake_check, line 8:
+Job 8  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/BAMResults/P0rep2subsample_R2Aligned.out.bam
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-11T184403.616832.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

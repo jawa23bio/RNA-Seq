@@ -3,31 +3,52 @@
 
 rule all:
 	input:
+		expand('results/{sample}{rep}subsample_R{number}Aligned.out.bam', sample=['AD', 'P0', 'P4', 'P7'], rep = ['rep1', 'rep2'], number=[1,2]),
+		'results/GRCm39.fa.gz',
+		'results/m39_GA.gtf',
+		expand('results/{sample}{rep}subsample_R{number}.txt', sample = ['AD', 'P0', 'P4', 'P7'], rep = ['rep1', 'rep2'], number= [1,2])
 
 rule get_m39:
 	output:
+		'results/GRCm39.fa.gz'
 	params:
+		outdir = 'results/GRCm39.fa'
 	shell:
 		'''
+		wget -O {output} https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M34/GRCm39.primary_assembly.genome.fa.gz
 		'''
 
 rule get_m39_gtf:
 	output:
+		'results/m39_GA.gtf'
 	params:
+		outdir = 'results/m39_GA.gtf.gz'
 	shell:
 		'''
+		wget -O {params.outdir} https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M34/gencode.vM34.chr_patch_hapl_scaff.annotation.gtf.gz
+		gunzip -k {output}
 		'''
 
 # make sure to read up on how STAR names it output files	
 rule star:
 	input:
+		fastq = 'samples/{sample}{rep}subsample_R{number}.fastq.gz',
+		Genome_index = 'samples/m39_subset_star/'
 	output:	
+		bam = 'results/{sample}{rep}subsample_R{number}Aligned.out.bam'
 	params:
+		outdir = 'results/'
 	shell:
 		'''
+		STAR --genomeDir {input.Genome_index}/ --readFilesCommand zcat --readFilesIn {input.fastq} --outSAMtype BAM Unsorted --outFileNamePrefix {params.outdir}/{wildcards.sample}{wildcards.rep}subsample_R{wildcards.number}
 		'''
 
 rule samtools_flagstat:
 	input:
+		bam = 'results/{sample}{rep}subsample_R{number}Aligned.out.bam'
 	output:
+		flagstat = 'results/{sample}{rep}subsample_R{number}.txt'
 	shell:
+		'''
+		samtools flagstat {input.bam} > {output.flagstat}
+		'''

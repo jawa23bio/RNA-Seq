@@ -1,0 +1,7 @@
+Building DAG of jobs...
+MissingInputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Missing input files for rule star:
+    output: results/BAMResults/ADrep1subsample_R1Aligned.out.bam
+    wildcards: sample=BAMResults/ADrep, rep=1, number=1
+    affected files:
+        samples/Sample_Fastq/BAMResults/ADrep1subsample_R1.fastq.gz

@@ -1,0 +1,474 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+samtools_flagstat       16
+star                    16
+total                   33
+
+Select jobs to execute...
+Execute 16 jobs...
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P0rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P0rep1subsample_R2Aligned.out.bam
+    jobid: 6
+    reason: Missing output files: results/P0rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P0rep, rep=1, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P0rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P0rep2subsample_R2Aligned.out.bam
+    jobid: 8
+    reason: Missing output files: results/P0rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P0rep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/ADrep2subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/ADrep2subsample_R1Aligned.out.bam
+    jobid: 3
+    reason: Missing output files: results/ADrep2subsample_R1Aligned.out.bam
+    wildcards: sample=ADrep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P7rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P7rep1subsample_R2Aligned.out.bam
+    jobid: 14
+    reason: Missing output files: results/P7rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P7rep, rep=1, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P7rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P7rep2subsample_R2Aligned.out.bam
+    jobid: 16
+    reason: Missing output files: results/P7rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P7rep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/ADrep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/ADrep1subsample_R2Aligned.out.bam
+    jobid: 2
+    reason: Missing output files: results/ADrep1subsample_R2Aligned.out.bam
+    wildcards: sample=ADrep, rep=1, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P4rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P4rep1subsample_R2Aligned.out.bam
+    jobid: 10
+    reason: Missing output files: results/P4rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P4rep, rep=1, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/ADrep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/ADrep2subsample_R2Aligned.out.bam
+    jobid: 4
+    reason: Missing output files: results/ADrep2subsample_R2Aligned.out.bam
+    wildcards: sample=ADrep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P4rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P4rep2subsample_R2Aligned.out.bam
+    jobid: 12
+    reason: Missing output files: results/P4rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P4rep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P0rep2subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/P0rep2subsample_R1Aligned.out.bam
+    jobid: 7
+    reason: Missing output files: results/P0rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P0rep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P7rep2subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/P7rep2subsample_R1Aligned.out.bam
+    jobid: 15
+    reason: Missing output files: results/P7rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P7rep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/ADrep1subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/ADrep1subsample_R1Aligned.out.bam
+    jobid: 1
+    reason: Missing output files: results/ADrep1subsample_R1Aligned.out.bam
+    wildcards: sample=ADrep, rep=1, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P4rep1subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/P4rep1subsample_R1Aligned.out.bam
+    jobid: 9
+    reason: Missing output files: results/P4rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P4rep, rep=1, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P4rep2subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/P4rep2subsample_R1Aligned.out.bam
+    jobid: 11
+    reason: Missing output files: results/P4rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P4rep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P0rep1subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/P0rep1subsample_R1Aligned.out.bam
+    jobid: 5
+    reason: Missing output files: results/P0rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P0rep, rep=1, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:33 2024]
+localrule star:
+    input: samples/Sample_Fastq/P7rep1subsample_R1.fastq.gz, samples/m39_subset_star
+    output: results/P7rep1subsample_R1Aligned.out.bam
+    jobid: 13
+    reason: Missing output files: results/P7rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P7rep, rep=1, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 10.
+1 of 33 steps (3%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P4rep1subsample_R2Aligned.out.bam
+    output: results/P4rep1subsample_R2.txt
+    jobid: 28
+    reason: Missing output files: results/P4rep1subsample_R2.txt; Input files updated by another job: results/P4rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P4rep, rep=1, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 5.
+2 of 33 steps (6%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P0rep1subsample_R1Aligned.out.bam
+    output: results/P0rep1subsample_R1.txt
+    jobid: 23
+    reason: Missing output files: results/P0rep1subsample_R1.txt; Input files updated by another job: results/P0rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P0rep, rep=1, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 13.
+3 of 33 steps (9%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P7rep1subsample_R1Aligned.out.bam
+    output: results/P7rep1subsample_R1.txt
+    jobid: 31
+    reason: Missing output files: results/P7rep1subsample_R1.txt; Input files updated by another job: results/P7rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P7rep, rep=1, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 31.
+4 of 33 steps (12%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 23.
+5 of 33 steps (15%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 28.
+6 of 33 steps (18%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 12.
+7 of 33 steps (21%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P4rep2subsample_R2Aligned.out.bam
+    output: results/P4rep2subsample_R2.txt
+    jobid: 30
+    reason: Missing output files: results/P4rep2subsample_R2.txt; Input files updated by another job: results/P4rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P4rep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 30.
+8 of 33 steps (24%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 16.
+9 of 33 steps (27%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P7rep2subsample_R2Aligned.out.bam
+    output: results/P7rep2subsample_R2.txt
+    jobid: 34
+    reason: Missing output files: results/P7rep2subsample_R2.txt; Input files updated by another job: results/P7rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P7rep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 34.
+10 of 33 steps (30%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 1.
+11 of 33 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/ADrep1subsample_R1Aligned.out.bam
+    output: results/ADrep1subsample_R1.txt
+    jobid: 19
+    reason: Missing output files: results/ADrep1subsample_R1.txt; Input files updated by another job: results/ADrep1subsample_R1Aligned.out.bam
+    wildcards: sample=ADrep, rep=1, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 19.
+12 of 33 steps (36%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 8.
+13 of 33 steps (39%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P0rep2subsample_R2Aligned.out.bam
+    output: results/P0rep2subsample_R2.txt
+    jobid: 26
+    reason: Missing output files: results/P0rep2subsample_R2.txt; Input files updated by another job: results/P0rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P0rep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 26.
+14 of 33 steps (42%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 6.
+15 of 33 steps (45%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P0rep1subsample_R2Aligned.out.bam
+    output: results/P0rep1subsample_R2.txt
+    jobid: 24
+    reason: Missing output files: results/P0rep1subsample_R2.txt; Input files updated by another job: results/P0rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P0rep, rep=1, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 24.
+16 of 33 steps (48%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 11.
+17 of 33 steps (52%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P4rep2subsample_R1Aligned.out.bam
+    output: results/P4rep2subsample_R1.txt
+    jobid: 29
+    reason: Missing output files: results/P4rep2subsample_R1.txt; Input files updated by another job: results/P4rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P4rep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 29.
+18 of 33 steps (55%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 14.
+19 of 33 steps (58%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P7rep1subsample_R2Aligned.out.bam
+    output: results/P7rep1subsample_R2.txt
+    jobid: 32
+    reason: Missing output files: results/P7rep1subsample_R2.txt; Input files updated by another job: results/P7rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P7rep, rep=1, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 32.
+20 of 33 steps (61%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 3.
+21 of 33 steps (64%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/ADrep2subsample_R1Aligned.out.bam
+    output: results/ADrep2subsample_R1.txt
+    jobid: 21
+    reason: Missing output files: results/ADrep2subsample_R1.txt; Input files updated by another job: results/ADrep2subsample_R1Aligned.out.bam
+    wildcards: sample=ADrep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 21.
+22 of 33 steps (67%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 2.
+23 of 33 steps (70%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/ADrep1subsample_R2Aligned.out.bam
+    output: results/ADrep1subsample_R2.txt
+    jobid: 20
+    reason: Missing output files: results/ADrep1subsample_R2.txt; Input files updated by another job: results/ADrep1subsample_R2Aligned.out.bam
+    wildcards: sample=ADrep, rep=1, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 20.
+24 of 33 steps (73%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 7.
+25 of 33 steps (76%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P0rep2subsample_R1Aligned.out.bam
+    output: results/P0rep2subsample_R1.txt
+    jobid: 25
+    reason: Missing output files: results/P0rep2subsample_R1.txt; Input files updated by another job: results/P0rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P0rep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 9.
+26 of 33 steps (79%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P4rep1subsample_R1Aligned.out.bam
+    output: results/P4rep1subsample_R1.txt
+    jobid: 27
+    reason: Missing output files: results/P4rep1subsample_R1.txt; Input files updated by another job: results/P4rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P4rep, rep=1, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 25.
+27 of 33 steps (82%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 15.
+28 of 33 steps (85%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 4.
+29 of 33 steps (88%) done
+Select jobs to execute...
+Execute 2 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/ADrep2subsample_R2Aligned.out.bam
+    output: results/ADrep2subsample_R2.txt
+    jobid: 22
+    reason: Missing output files: results/ADrep2subsample_R2.txt; Input files updated by another job: results/ADrep2subsample_R2Aligned.out.bam
+    wildcards: sample=ADrep, rep=2, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+
+[Sun Feb 11 19:01:35 2024]
+localrule samtools_flagstat:
+    input: results/P7rep2subsample_R1Aligned.out.bam
+    output: results/P7rep2subsample_R1.txt
+    jobid: 33
+    reason: Missing output files: results/P7rep2subsample_R1.txt; Input files updated by another job: results/P7rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P7rep, rep=2, number=1
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 27.
+30 of 33 steps (91%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 22.
+31 of 33 steps (94%) done
+[Sun Feb 11 19:01:35 2024]
+Finished job 33.
+32 of 33 steps (97%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 19:01:35 2024]
+localrule all:
+    input: results/ADrep1subsample_R1Aligned.out.bam, results/ADrep1subsample_R2Aligned.out.bam, results/ADrep2subsample_R1Aligned.out.bam, results/ADrep2subsample_R2Aligned.out.bam, results/P0rep1subsample_R1Aligned.out.bam, results/P0rep1subsample_R2Aligned.out.bam, results/P0rep2subsample_R1Aligned.out.bam, results/P0rep2subsample_R2Aligned.out.bam, results/P4rep1subsample_R1Aligned.out.bam, results/P4rep1subsample_R2Aligned.out.bam, results/P4rep2subsample_R1Aligned.out.bam, results/P4rep2subsample_R2Aligned.out.bam, results/P7rep1subsample_R1Aligned.out.bam, results/P7rep1subsample_R2Aligned.out.bam, results/P7rep2subsample_R1Aligned.out.bam, results/P7rep2subsample_R2Aligned.out.bam, results/GRCm39.fa.gz, results/m39_GA.gtf, results/ADrep1subsample_R1.txt, results/ADrep1subsample_R2.txt, results/ADrep2subsample_R1.txt, results/ADrep2subsample_R2.txt, results/P0rep1subsample_R1.txt, results/P0rep1subsample_R2.txt, results/P0rep2subsample_R1.txt, results/P0rep2subsample_R2.txt, results/P4rep1subsample_R1.txt, results/P4rep1subsample_R2.txt, results/P4rep2subsample_R1.txt, results/P4rep2subsample_R2.txt, results/P7rep1subsample_R1.txt, results/P7rep1subsample_R2.txt, results/P7rep2subsample_R1.txt, results/P7rep2subsample_R2.txt
+    jobid: 0
+    reason: Input files updated by another job: results/P0rep1subsample_R2.txt, results/P7rep1subsample_R1.txt, results/P4rep1subsample_R1Aligned.out.bam, results/P4rep2subsample_R2.txt, results/ADrep1subsample_R2.txt, results/P0rep1subsample_R2Aligned.out.bam, results/ADrep1subsample_R1Aligned.out.bam, results/ADrep1subsample_R2Aligned.out.bam, results/P0rep1subsample_R1Aligned.out.bam, results/P4rep2subsample_R2Aligned.out.bam, results/P0rep1subsample_R1.txt, results/P7rep2subsample_R2Aligned.out.bam, results/P0rep2subsample_R2.txt, results/P0rep2subsample_R2Aligned.out.bam, results/P7rep1subsample_R2Aligned.out.bam, results/P4rep2subsample_R1Aligned.out.bam, results/ADrep1subsample_R1.txt, results/ADrep2subsample_R1Aligned.out.bam, results/P4rep1subsample_R2.txt, results/P7rep2subsample_R1Aligned.out.bam, results/P7rep1subsample_R1Aligned.out.bam, results/ADrep2subsample_R2Aligned.out.bam, results/ADrep2subsample_R1.txt, results/P7rep1subsample_R2.txt, results/P7rep2subsample_R1.txt, results/P4rep1subsample_R2Aligned.out.bam, results/ADrep2subsample_R2.txt, results/P0rep2subsample_R1Aligned.out.bam, results/P4rep2subsample_R1.txt, results/P0rep2subsample_R1.txt, results/P4rep1subsample_R1.txt, results/P7rep2subsample_R2.txt
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+[Sun Feb 11 19:01:35 2024]
+Finished job 0.
+33 of 33 steps (100%) done
+Complete log: .snakemake/log/2024-02-11T190132.797286.snakemake.log

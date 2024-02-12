@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+samtools_flagstat       16
+star                    16
+total                   33
+
+Select jobs to execute...
+Execute 16 jobs...
+
+[Sun Feb 11 19:01:09 2024]
+localrule star:
+    input: samples/Sample_Fastq/P0rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P0rep1subsample_R2Aligned.out.bam
+    jobid: 6
+    reason: Missing output files: results/P0rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P0rep, rep=1, number=2
+    resources: tmpdir=/scratch/4450995.1.academic-gpu
+
+RuleException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+AttributeError: 'InputFiles' object has no attribute 'fastq1', when formatting the following:
+
+		STAR --genomeDir {input.Genome_index}/ --readFilesCommand zcat --readFilesIn {input.fastq1} --outSAMtype BAM Unsorted --outFileNamePrefix {params.outdir}/{wildcards.sample}{wildcards.rep}subsample_R{wildcards.number}
+		

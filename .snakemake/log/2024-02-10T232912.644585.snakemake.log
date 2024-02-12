@@ -1,0 +1,243 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+samtools_flagstat        1
+star                    16
+total                   18
+
+Select jobs to execute...
+Execute 16 jobs...
+
+[Sat Feb 10 23:29:12 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/ADrep2subsample_R2Aligned.out.bam
+    jobid: 4
+    reason: Missing output files: results/ADrep2subsample_R2Aligned.out.bam
+    wildcards: sample=ADrep, rep=2, number=2
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:12 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P0rep1subsample_R2Aligned.out.bam
+    jobid: 6
+    reason: Missing output files: results/P0rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P0rep, rep=1, number=2
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:12 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P0rep2subsample_R2Aligned.out.bam
+    jobid: 8
+    reason: Missing output files: results/P0rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P0rep, rep=2, number=2
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/ADrep1subsample_R2Aligned.out.bam
+    jobid: 2
+    reason: Missing output files: results/ADrep1subsample_R2Aligned.out.bam
+    wildcards: sample=ADrep, rep=1, number=2
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/ADrep2subsample_R1Aligned.out.bam
+    jobid: 3
+    reason: Missing output files: results/ADrep2subsample_R1Aligned.out.bam
+    wildcards: sample=ADrep, rep=2, number=1
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P4rep1subsample_R2Aligned.out.bam
+    jobid: 10
+    reason: Missing output files: results/P4rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P4rep, rep=1, number=2
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P4rep2subsample_R2Aligned.out.bam
+    jobid: 12
+    reason: Missing output files: results/P4rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P4rep, rep=2, number=2
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P7rep1subsample_R2Aligned.out.bam
+    jobid: 14
+    reason: Missing output files: results/P7rep1subsample_R2Aligned.out.bam
+    wildcards: sample=P7rep, rep=1, number=2
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P7rep2subsample_R2Aligned.out.bam
+    jobid: 16
+    reason: Missing output files: results/P7rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P7rep, rep=2, number=2
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/ADrep1subsample_R1Aligned.out.bam
+    jobid: 1
+    reason: Missing output files: results/ADrep1subsample_R1Aligned.out.bam
+    wildcards: sample=ADrep, rep=1, number=1
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P0rep1subsample_R1Aligned.out.bam
+    jobid: 5
+    reason: Missing output files: results/P0rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P0rep, rep=1, number=1
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P0rep2subsample_R1Aligned.out.bam
+    jobid: 7
+    reason: Missing output files: results/P0rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P0rep, rep=2, number=1
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P4rep1subsample_R1Aligned.out.bam
+    jobid: 9
+    reason: Missing output files: results/P4rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P4rep, rep=1, number=1
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P4rep2subsample_R1Aligned.out.bam
+    jobid: 11
+    reason: Missing output files: results/P4rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P4rep, rep=2, number=1
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P7rep1subsample_R1Aligned.out.bam
+    jobid: 13
+    reason: Missing output files: results/P7rep1subsample_R1Aligned.out.bam
+    wildcards: sample=P7rep, rep=1, number=1
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+
+[Sat Feb 10 23:29:13 2024]
+localrule star:
+    input: samples/Sample_Fastq, samples/m39_subset_star
+    output: results/P7rep2subsample_R1Aligned.out.bam
+    jobid: 15
+    reason: Missing output files: results/P7rep2subsample_R1Aligned.out.bam
+    wildcards: sample=P7rep, rep=2, number=1
+    resources: tmpdir=/scratch/4449694.1.academic-gpu
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 14  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P7rep1subsample_R2Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 10  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P4rep1subsample_R2Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 6  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P0rep1subsample_R2Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 16  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P7rep2subsample_R2Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 12  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P4rep2subsample_R2Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 3  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/ADrep2subsample_R1Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 4  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/ADrep2subsample_R2Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 7  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P0rep2subsample_R1Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 2  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/ADrep1subsample_R2Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 1  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/ADrep1subsample_R1Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 8  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P0rep2subsample_R2Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 13  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P7rep1subsample_R1Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 15  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P7rep2subsample_R1Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 11  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P4rep2subsample_R1Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 9  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P4rep1subsample_R1Aligned.out.bam
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 33:
+Job 5  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/P0rep1subsample_R1Aligned.out.bam
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-10T232912.644585.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
