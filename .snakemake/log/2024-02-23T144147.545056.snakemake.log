@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+all          1
+verse        1
+total        2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Feb 23 14:41:47 2024]
+localrule verse:
+    input: results/ADrep1subsample.Aligned.out.bam, results/ADrep2subsample.Aligned.out.bam, results/P0rep1subsample.Aligned.out.bam, results/P0rep2subsample.Aligned.out.bam, results/P4rep1subsample.Aligned.out.bam, results/P4rep2subsample.Aligned.out.bam, results/P7rep1subsample.Aligned.out.bam, results/P7rep2subsample.Aligned.out.bam, results/m39_GA.gtf
+    output: results/ADrep1subsample.exon.txt, results/ADrep2subsample.exon.txt, results/P0rep1subsample.exon.txt, results/P0rep2subsample.exon.txt, results/P4rep1subsample.exon.txt, results/P4rep2subsample.exon.txt, results/P7rep1subsample.exon.txt, results/P7rep2subsample.exon.txt
+    jobid: 1
+    reason: Missing output files: results/ADrep2subsample.exon.txt, results/P4rep2subsample.exon.txt, results/ADrep1subsample.exon.txt, results/P0rep1subsample.exon.txt, results/P4rep1subsample.exon.txt, results/P7rep2subsample.exon.txt, results/P0rep2subsample.exon.txt, results/P7rep1subsample.exon.txt
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule verse in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week3.snake, line 11:
+Job 1  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/ADrep1subsample.exon.txt
+results/ADrep2subsample.exon.txt
+results/P0rep1subsample.exon.txt
+results/P0rep2subsample.exon.txt
+results/P4rep1subsample.exon.txt
+results/P4rep2subsample.exon.txt
+results/P7rep1subsample.exon.txt
+results/P7rep2subsample.exon.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-23T144147.545056.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

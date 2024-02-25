@@ -1,0 +1,40 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 17:12:14 2024]
+localrule fastqc:
+    input: samples/full_files/P7rep1_R1.fastq.gz
+    output: results/P7rep1_R1_fastqc.html
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=P7rep, rep=1, number=1
+    resources: mem_mb=1248, mem_mib=1191, disk_mb=1248, disk_mib=1191, tmpdir=/scratch/4846036.1.academic
+
+Started analysis of P7rep1_R1.fastq.gz
+Approx 5% complete for P7rep1_R1.fastq.gz
+Approx 10% complete for P7rep1_R1.fastq.gz
+Approx 15% complete for P7rep1_R1.fastq.gz
+Approx 20% complete for P7rep1_R1.fastq.gz
+Approx 25% complete for P7rep1_R1.fastq.gz
+Approx 30% complete for P7rep1_R1.fastq.gz
+Approx 35% complete for P7rep1_R1.fastq.gz
+Approx 40% complete for P7rep1_R1.fastq.gz
+Approx 45% complete for P7rep1_R1.fastq.gz
+Approx 50% complete for P7rep1_R1.fastq.gz
+Approx 55% complete for P7rep1_R1.fastq.gz
+Approx 60% complete for P7rep1_R1.fastq.gz
+Approx 65% complete for P7rep1_R1.fastq.gz
+Approx 70% complete for P7rep1_R1.fastq.gz
+Approx 75% complete for P7rep1_R1.fastq.gz
+Approx 80% complete for P7rep1_R1.fastq.gz
+Approx 85% complete for P7rep1_R1.fastq.gz
+Approx 90% complete for P7rep1_R1.fastq.gz
+Approx 95% complete for P7rep1_R1.fastq.gz
+[Sat Feb 24 17:13:19 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.

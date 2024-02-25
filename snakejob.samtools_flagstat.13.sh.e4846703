@@ -1,0 +1,20 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:25:07 2024]
+localrule samtools_flagstat:
+    input: results/P0rep1.Aligned.out.bam
+    output: results/P0rep1.txt
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=P0rep, rep=1
+    resources: mem_mb=4845, mem_mib=4621, disk_mb=4845, disk_mib=4621, tmpdir=/scratch/4846703.1.academic
+
+[Sat Feb 24 18:25:22 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.

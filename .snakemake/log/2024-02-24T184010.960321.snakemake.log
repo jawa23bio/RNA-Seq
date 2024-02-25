@@ -1,0 +1,184 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 12
+Job stats:
+job              count
+-------------  -------
+all                  1
+concat_df            1
+filter_counts        1
+parse_gtf            1
+verse                8
+total               12
+
+Select jobs to execute...
+Execute 9 jobs...
+
+[Sat Feb 24 18:40:11 2024]
+rule verse:
+    input: results/P4rep1.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P4rep1.exon.txt
+    jobid: 5
+    reason: Missing output files: results/P4rep1.exon.txt
+    wildcards: sample=P4rep1
+    resources: tmpdir=<TBD>
+
+Submitted job 5 with external jobid 'Your job 4846733 ("snakejob.verse.5.sh") has been submitted'.
+
+[Sat Feb 24 18:40:11 2024]
+rule verse:
+    input: results/P7rep1.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P7rep1.exon.txt
+    jobid: 7
+    reason: Missing output files: results/P7rep1.exon.txt
+    wildcards: sample=P7rep1
+    resources: tmpdir=<TBD>
+
+Submitted job 7 with external jobid 'Your job 4846734 ("snakejob.verse.7.sh") has been submitted'.
+
+[Sat Feb 24 18:40:11 2024]
+rule verse:
+    input: results/ADrep2.Aligned.out.bam, results/m39_GA.gtf
+    output: results/ADrep2.exon.txt
+    jobid: 2
+    reason: Missing output files: results/ADrep2.exon.txt
+    wildcards: sample=ADrep2
+    resources: tmpdir=<TBD>
+
+Submitted job 2 with external jobid 'Your job 4846735 ("snakejob.verse.2.sh") has been submitted'.
+
+[Sat Feb 24 18:40:11 2024]
+rule verse:
+    input: results/ADrep1.Aligned.out.bam, results/m39_GA.gtf
+    output: results/ADrep1.exon.txt
+    jobid: 1
+    reason: Missing output files: results/ADrep1.exon.txt
+    wildcards: sample=ADrep1
+    resources: tmpdir=<TBD>
+
+Submitted job 1 with external jobid 'Your job 4846736 ("snakejob.verse.1.sh") has been submitted'.
+
+[Sat Feb 24 18:40:11 2024]
+rule verse:
+    input: results/P0rep2.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P0rep2.exon.txt
+    jobid: 4
+    reason: Missing output files: results/P0rep2.exon.txt
+    wildcards: sample=P0rep2
+    resources: tmpdir=<TBD>
+
+Submitted job 4 with external jobid 'Your job 4846737 ("snakejob.verse.4.sh") has been submitted'.
+
+[Sat Feb 24 18:40:11 2024]
+rule verse:
+    input: results/P0rep1.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P0rep1.exon.txt
+    jobid: 3
+    reason: Missing output files: results/P0rep1.exon.txt
+    wildcards: sample=P0rep1
+    resources: tmpdir=<TBD>
+
+Submitted job 3 with external jobid 'Your job 4846738 ("snakejob.verse.3.sh") has been submitted'.
+
+[Sat Feb 24 18:40:11 2024]
+rule verse:
+    input: results/P4rep2.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P4rep2.exon.txt
+    jobid: 6
+    reason: Missing output files: results/P4rep2.exon.txt
+    wildcards: sample=P4rep2
+    resources: tmpdir=<TBD>
+
+Submitted job 6 with external jobid 'Your job 4846739 ("snakejob.verse.6.sh") has been submitted'.
+
+[Sat Feb 24 18:40:12 2024]
+rule verse:
+    input: results/P7rep2.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P7rep2.exon.txt
+    jobid: 8
+    reason: Missing output files: results/P7rep2.exon.txt
+    wildcards: sample=P7rep2
+    resources: tmpdir=<TBD>
+
+Submitted job 8 with external jobid 'Your job 4846740 ("snakejob.verse.8.sh") has been submitted'.
+
+[Sat Feb 24 18:40:12 2024]
+rule parse_gtf:
+    input: results/m39_GA.gtf
+    output: results/full_genemap.csv
+    jobid: 10
+    reason: Missing output files: results/full_genemap.csv
+    resources: tmpdir=<TBD>
+
+Submitted job 10 with external jobid 'Your job 4846741 ("snakejob.parse_gtf.10.sh") has been submitted'.
+[Sat Feb 24 18:41:51 2024]
+Finished job 10.
+1 of 12 steps (8%) done
+[Sat Feb 24 18:44:21 2024]
+Finished job 7.
+2 of 12 steps (17%) done
+[Sat Feb 24 18:44:51 2024]
+Finished job 5.
+3 of 12 steps (25%) done
+[Sat Feb 24 18:44:51 2024]
+Finished job 8.
+4 of 12 steps (33%) done
+[Sat Feb 24 18:45:21 2024]
+Finished job 2.
+5 of 12 steps (42%) done
+[Sat Feb 24 18:45:21 2024]
+Finished job 1.
+6 of 12 steps (50%) done
+[Sat Feb 24 18:45:21 2024]
+Finished job 3.
+7 of 12 steps (58%) done
+[Sat Feb 24 18:45:51 2024]
+Finished job 4.
+8 of 12 steps (67%) done
+[Sat Feb 24 18:45:51 2024]
+Finished job 6.
+9 of 12 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:45:51 2024]
+rule concat_df:
+    input: results/ADrep1.exon.txt, results/ADrep2.exon.txt, results/P0rep1.exon.txt, results/P0rep2.exon.txt, results/P4rep1.exon.txt, results/P4rep2.exon.txt, results/P7rep1.exon.txt, results/P7rep2.exon.txt
+    output: results/full_matrix.csv
+    jobid: 9
+    reason: Missing output files: results/full_matrix.csv; Input files updated by another job: results/P4rep2.exon.txt, results/P7rep2.exon.txt, results/ADrep1.exon.txt, results/P0rep1.exon.txt, results/ADrep2.exon.txt, results/P0rep2.exon.txt, results/P4rep1.exon.txt, results/P7rep1.exon.txt
+    resources: tmpdir=<TBD>
+
+Submitted job 9 with external jobid 'Your job 4846753 ("snakejob.concat_df.9.sh") has been submitted'.
+[Sat Feb 24 18:49:31 2024]
+Finished job 9.
+10 of 12 steps (83%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:49:31 2024]
+rule filter_counts:
+    input: results/full_matrix.csv
+    output: results/full_filtered_counts_matrix.csv
+    jobid: 11
+    reason: Missing output files: results/full_filtered_counts_matrix.csv; Input files updated by another job: results/full_matrix.csv
+    resources: tmpdir=<TBD>
+
+Submitted job 11 with external jobid 'Your job 4846759 ("snakejob.filter_counts.11.sh") has been submitted'.
+[Sat Feb 24 18:53:11 2024]
+Finished job 11.
+11 of 12 steps (92%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:53:11 2024]
+localrule all:
+    input: results/ADrep1.exon.txt, results/ADrep2.exon.txt, results/P0rep1.exon.txt, results/P0rep2.exon.txt, results/P4rep1.exon.txt, results/P4rep2.exon.txt, results/P7rep1.exon.txt, results/P7rep2.exon.txt, results/full_matrix.csv, results/full_genemap.csv, results/full_filtered_counts_matrix.csv
+    jobid: 0
+    reason: Input files updated by another job: results/ADrep1.exon.txt, results/full_filtered_counts_matrix.csv, results/P7rep1.exon.txt, results/full_genemap.csv, results/full_matrix.csv, results/P4rep2.exon.txt, results/P7rep2.exon.txt, results/P0rep1.exon.txt, results/ADrep2.exon.txt, results/P0rep2.exon.txt, results/P4rep1.exon.txt
+    resources: tmpdir=/scratch
+
+[Sat Feb 24 18:53:11 2024]
+Finished job 0.
+12 of 12 steps (100%) done
+Complete log: .snakemake/log/2024-02-24T184010.960321.snakemake.log

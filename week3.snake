@@ -1,3 +1,53 @@
 # Use this file and construct your own snakefile that successfully creates a workflow
 # for this week's tasks. We have provided you a visual representation of what it should
 # look like in the assigment. 
+
+names = ['ADrep1', 'ADrep2', 'P0rep1', 'P0rep2', 'P4rep1', 'P4rep2', 'P7rep1', 'P7rep2']
+
+rule all:
+    input:
+        expand('results/{sample}.exon.txt', sample = names),
+        'results/full_matrix.csv',
+        'results/full_genemap.csv',
+        'results/full_filtered_counts_matrix.csv'
+        
+rule verse:
+    input:
+        bam='results/{sample}.Aligned.out.bam',
+        gtf='results/m39_GA.gtf'
+    output:
+        exon='results/{sample}.exon.txt'
+    params:
+        prefix='results/{sample}',
+        sample=lambda wildcards: wildcards.sample
+    shell:
+        '''
+        verse -S -a {input.gtf} -o {params.prefix} {input.bam}
+        '''
+rule concat_df:
+  input:
+    verse_files = expand('results/{sample}.exon.txt', sample = names)
+  output:
+    cts_matrix = 'results/full_matrix.csv'
+  shell:
+    '''
+    python concat_df.py -i {input.verse_files} -o {output.cts_matrix}
+    '''
+rule parse_gtf:
+    input:
+        gtf = 'results/m39_GA.gtf'
+    output:
+        map = 'results/full_genemap.csv'
+    shell:
+        '''
+        python parse_gtf.py -i {input.gtf} -o {output.map}
+        '''
+rule filter_counts:
+    input:
+        matrix = 'results/full_matrix.csv'
+    output:
+        filter = 'results/full_filtered_counts_matrix.csv'
+    shell:
+        '''
+        python filter_cts_mat.py -i {input.matrix} -o {output.filter}
+        '''

@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 17:17:02 2024]
+localrule multiqc:
+    input: results/ADrep1_R1_fastqc.html, results/ADrep1_R2_fastqc.html, results/ADrep2_R1_fastqc.html, results/ADrep2_R2_fastqc.html, results/P0rep1_R1_fastqc.html, results/P0rep1_R2_fastqc.html, results/P0rep2_R1_fastqc.html, results/P0rep2_R2_fastqc.html, results/P4rep1_R1_fastqc.html, results/P4rep1_R2_fastqc.html, results/P4rep2_R1_fastqc.html, results/P4rep2_R2_fastqc.html, results/P7rep1_R1_fastqc.html, results/P7rep1_R2_fastqc.html, results/P7rep2_R1_fastqc.html, results/P7rep2_R2_fastqc.html
+    output: results/multiqc_report.html
+    jobid: 0
+    reason: Forced execution
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=/scratch/4846052.1.academic
+
+
+  /// MultiQC 🔍 | v1.19
+
+|           multiqc | MultiQC Version v1.20 now available!
+|           multiqc | Search path : /projectnb/bf528/students/jawa/project-1-template-jawa23bio/results
+|         searching | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 150/150  
+Matplotlib is building the font cache; this may take a moment.
+|          samtools | Found 8 flagstat reports
+|              star | Found 8 reports
+|            fastqc | Found 31 reports
+|           multiqc | Report      : results/multiqc_report.html
+|           multiqc | Data        : results/multiqc_data   (overwritten)
+|           multiqc | MultiQC complete
+[Sat Feb 24 17:17:41 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.

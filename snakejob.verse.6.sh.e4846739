@@ -1,0 +1,20 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:41:34 2024]
+localrule verse:
+    input: results/P4rep2.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P4rep2.exon.txt
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=P4rep2
+    resources: mem_mb=7289, mem_mib=6952, disk_mb=7289, disk_mib=6952, tmpdir=/scratch/4846739.1.academic
+
+[Sat Feb 24 18:45:26 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.

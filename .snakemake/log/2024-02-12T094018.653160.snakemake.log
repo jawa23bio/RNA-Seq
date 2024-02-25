@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+all            1
+get_m39        1
+total          2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 12 09:40:19 2024]
+localrule get_m39:
+    output: results/GRCm39.fa.gz
+    jobid: 17
+    reason: Params have changed since last execution
+    resources: tmpdir=/scratch/4456235.1.academic-gpu
+
+Terminating processes on user request, this might take some time.
+[Mon Feb 12 09:40:37 2024]
+Error in rule get_m39:
+    jobid: 17
+    output: results/GRCm39.fa.gz
+    shell:
+        
+		wget -O results/GRCm39.fa.gz https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M34/GRCm39.primary_assembly.genome.fa.gz
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2024-02-12T094018.653160.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

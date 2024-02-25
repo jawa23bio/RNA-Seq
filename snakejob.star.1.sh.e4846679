@@ -1,0 +1,20 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:14:09 2024]
+localrule star:
+    input: samples/full_files/ADrep1_R1.fastq.gz, samples/full_files/ADrep1_R2.fastq.gz, results/m39_star
+    output: results/ADrep1.Aligned.out.bam
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=ADrep, rep=1
+    resources: mem_mb=3766, mem_mib=3592, disk_mb=3766, disk_mib=3592, tmpdir=/scratch/4846679.1.academic
+
+[Sat Feb 24 18:23:16 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.

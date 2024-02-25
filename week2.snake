@@ -3,10 +3,10 @@
 
 rule all:
 	input:
-		expand('results/{sample}{rep}subsample.Aligned.out.bam', sample=['AD', 'P0', 'P4', 'P7'], rep = ['rep1', 'rep2']),
+		expand('results/{sample}{rep}.Aligned.out.bam', sample=['AD', 'P0', 'P4', 'P7'], rep = ['rep1', 'rep2']),
 		'results/GRCm39.fa.gz',
 		'results/m39_GA.gtf',
-		expand('results/{sample}{rep}subsample.txt', sample = ['AD', 'P0', 'P4', 'P7'], rep = ['rep1', 'rep2'])
+		expand('results/{sample}{rep}.txt', sample = ['AD', 'P0', 'P4', 'P7'], rep = ['rep1', 'rep2'])
 
 rule get_m39:
 	output:
@@ -30,23 +30,23 @@ rule get_m39_gtf:
 # make sure to read up on how STAR names it output files	
 rule star:
 	input:
-		fastq1 = 'samples/{sample}{rep}subsample_R1.fastq.gz',
-		fastq2 = 'samples/{sample}{rep}subsample_R2.fastq.gz',
-		Genome_index = 'samples/m39_subset_star/'
+		fastq1 = 'samples/full_files/{sample}{rep}_R1.fastq.gz',
+		fastq2 = 'samples/full_files/{sample}{rep}_R2.fastq.gz',
+		Genome_index = 'results/m39_star/'
 	output:	
-		bam = 'results/{sample}{rep}subsample.Aligned.out.bam'
+		bam = 'results/{sample}{rep}.Aligned.out.bam'
 	params:
 		outdir = 'results/'
 	shell:
 		'''
-		STAR --genomeDir {input.Genome_index} --readFilesIn {input.fastq1} {input.fastq2} --readFilesCommand zcat --outSAMtype BAM Unsorted --outFileNamePrefix {params.outdir}{wildcards.sample}{wildcards.rep}subsample.
+		STAR --genomeDir {input.Genome_index} --readFilesIn {input.fastq1} {input.fastq2} --readFilesCommand zcat --outSAMtype BAM Unsorted --outFileNamePrefix {params.outdir}{wildcards.sample}{wildcards.rep}.
 		'''
 
 rule samtools_flagstat:
 	input:
-		bam = 'results/{sample}{rep}subsample.Aligned.out.bam'
+		bam = 'results/{sample}{rep}.Aligned.out.bam'
 	output:
-		flagstat = 'results/{sample}{rep}subsample.txt'
+		flagstat = 'results/{sample}{rep}.txt'
 	shell:
 		'''
 		samtools flagstat {input.bam} > {output.flagstat}

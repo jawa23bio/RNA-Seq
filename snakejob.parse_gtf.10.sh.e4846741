@@ -1,0 +1,19 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:41:32 2024]
+localrule parse_gtf:
+    input: results/m39_GA.gtf
+    output: results/full_genemap.csv
+    jobid: 0
+    reason: Forced execution
+    resources: mem_mb=1722, mem_mib=1643, disk_mb=1722, disk_mib=1643, tmpdir=/scratch/4846741.1.academic
+
+[Sat Feb 24 18:41:35 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.

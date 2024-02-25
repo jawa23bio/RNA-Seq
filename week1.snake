@@ -1,5 +1,5 @@
 # use the names variable to store your list of file names
-sample_data = expand('{sample}{rep}subsample_R{number}.fastq.gz', sample=['AD', 'P0', 'P4', 'P7'],rep = ['rep1', 'rep2'], number=[1,2])
+sample_data = expand('{sample}{rep}_R{number}.fastq.gz', sample=['AD', 'P0', 'P4', 'P7'],rep = ['rep1', 'rep2'], number=[1,2])
 
 # your snakemake rule should produce the output from MultiQC and if you link your rules inputs
 # and outputs, you should only have one file listed in your rule all
@@ -12,9 +12,9 @@ rule all:
 # are structured
 rule fastqc:
 	input:
-		fastq = 'samples/{sample}{rep}subsample_R{number}.fastq.gz',
+		fastq = 'samples/full_files/{sample}{rep}_R{number}.fastq.gz',
 	output:
-		fastqc = 'results/{sample}{rep}subsample_R{number}_fastqc.html'
+		fastqc = 'results/{sample}{rep}_R{number}_fastqc.html'
 	params:
 		outdir = 'results/'
 	shell:
@@ -24,11 +24,11 @@ rule fastqc:
 # remember that you want multiqc to run only after fastqc has run on all the files
 rule multiqc:
 	input:
-		fastqc = expand('results/{sample}{rep}subsample_R{number}_fastqc.html', sample=['AD', 'P0', 'P4', 'P7'],rep = ['rep1', 'rep2'],number=[1,2])
+		fastqc = expand('results/{sample}{rep}_R{number}_fastqc.html', sample=['AD', 'P0', 'P4', 'P7'],rep = ['rep1', 'rep2'],number=[1,2])
 	output:
 		multiqc = 'results/multiqc_report.html'
 	params:
 		outdir = 'results/'
 	shell:
-		'''multiqc {params.outdir} -o {params.outdir}
+		'''multiqc -f {params.outdir} -o {params.outdir}
 		'''

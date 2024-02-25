@@ -1,0 +1,42 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+concat_df        1
+total            2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Feb 23 21:11:57 2024]
+localrule concat_df:
+    input: results/ADrep1subsample.exon.txt, results/ADrep2subsample.exon.txt, results/P0rep1subsample.exon.txt, results/P0rep2subsample.exon.txt, results/P4rep1subsample.exon.txt, results/P4rep2subsample.exon.txt, results/P7rep1subsample.exon.txt, results/P7rep2subsample.exon.txt
+    output: results/matrix.csv
+    jobid: 9
+    reason: Missing output files: results/matrix.csv
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+    python concat_df.py -i results/ADrep1subsample.exon.txt results/ADrep2subsample.exon.txt results/P0rep1subsample.exon.txt results/P0rep2subsample.exon.txt results/P4rep1subsample.exon.txt results/P4rep2subsample.exon.txt results/P7rep1subsample.exon.txt results/P7rep2subsample.exon.txt -o results/matrix.csv
+    
+[Fri Feb 23 21:11:58 2024]
+Finished job 9.
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Feb 23 21:11:58 2024]
+localrule all:
+    input: results/ADrep1subsample.exon.txt, results/ADrep2subsample.exon.txt, results/P0rep1subsample.exon.txt, results/P0rep2subsample.exon.txt, results/P4rep1subsample.exon.txt, results/P4rep2subsample.exon.txt, results/P7rep1subsample.exon.txt, results/P7rep2subsample.exon.txt, results/matrix.csv
+    jobid: 0
+    reason: Input files updated by another job: results/matrix.csv
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+[Fri Feb 23 21:11:58 2024]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2024-02-23T211157.252430.snakemake.log

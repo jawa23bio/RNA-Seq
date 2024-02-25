@@ -1,0 +1,267 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 17
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+samtools_flagstat        8
+star                     8
+total                   17
+
+Select jobs to execute...
+Execute 8 jobs...
+
+[Sat Feb 24 18:11:23 2024]
+rule star:
+    input: samples/full_files/ADrep1_R1.fastq.gz, samples/full_files/ADrep1_R2.fastq.gz, results/m39_star
+    output: results/ADrep1.Aligned.out.bam
+    jobid: 1
+    reason: Missing output files: results/ADrep1.Aligned.out.bam
+    wildcards: sample=ADrep, rep=1
+    resources: tmpdir=<TBD>
+
+Submitted job 1 with external jobid 'Your job 4846679 ("snakejob.star.1.sh") has been submitted'.
+
+[Sat Feb 24 18:11:23 2024]
+rule star:
+    input: samples/full_files/P7rep2_R1.fastq.gz, samples/full_files/P7rep2_R2.fastq.gz, results/m39_star
+    output: results/P7rep2.Aligned.out.bam
+    jobid: 8
+    reason: Missing output files: results/P7rep2.Aligned.out.bam
+    wildcards: sample=P7rep, rep=2
+    resources: tmpdir=<TBD>
+
+Submitted job 8 with external jobid 'Your job 4846680 ("snakejob.star.8.sh") has been submitted'.
+
+[Sat Feb 24 18:11:23 2024]
+rule star:
+    input: samples/full_files/ADrep2_R1.fastq.gz, samples/full_files/ADrep2_R2.fastq.gz, results/m39_star
+    output: results/ADrep2.Aligned.out.bam
+    jobid: 2
+    reason: Missing output files: results/ADrep2.Aligned.out.bam
+    wildcards: sample=ADrep, rep=2
+    resources: tmpdir=<TBD>
+
+Submitted job 2 with external jobid 'Your job 4846681 ("snakejob.star.2.sh") has been submitted'.
+
+[Sat Feb 24 18:11:23 2024]
+rule star:
+    input: samples/full_files/P4rep2_R1.fastq.gz, samples/full_files/P4rep2_R2.fastq.gz, results/m39_star
+    output: results/P4rep2.Aligned.out.bam
+    jobid: 6
+    reason: Missing output files: results/P4rep2.Aligned.out.bam
+    wildcards: sample=P4rep, rep=2
+    resources: tmpdir=<TBD>
+
+Submitted job 6 with external jobid 'Your job 4846682 ("snakejob.star.6.sh") has been submitted'.
+
+[Sat Feb 24 18:11:23 2024]
+rule star:
+    input: samples/full_files/P0rep1_R1.fastq.gz, samples/full_files/P0rep1_R2.fastq.gz, results/m39_star
+    output: results/P0rep1.Aligned.out.bam
+    jobid: 3
+    reason: Missing output files: results/P0rep1.Aligned.out.bam
+    wildcards: sample=P0rep, rep=1
+    resources: tmpdir=<TBD>
+
+Submitted job 3 with external jobid 'Your job 4846683 ("snakejob.star.3.sh") has been submitted'.
+
+[Sat Feb 24 18:11:23 2024]
+rule star:
+    input: samples/full_files/P0rep2_R1.fastq.gz, samples/full_files/P0rep2_R2.fastq.gz, results/m39_star
+    output: results/P0rep2.Aligned.out.bam
+    jobid: 4
+    reason: Missing output files: results/P0rep2.Aligned.out.bam
+    wildcards: sample=P0rep, rep=2
+    resources: tmpdir=<TBD>
+
+Submitted job 4 with external jobid 'Your job 4846684 ("snakejob.star.4.sh") has been submitted'.
+
+[Sat Feb 24 18:11:24 2024]
+rule star:
+    input: samples/full_files/P4rep1_R1.fastq.gz, samples/full_files/P4rep1_R2.fastq.gz, results/m39_star
+    output: results/P4rep1.Aligned.out.bam
+    jobid: 5
+    reason: Missing output files: results/P4rep1.Aligned.out.bam
+    wildcards: sample=P4rep, rep=1
+    resources: tmpdir=<TBD>
+
+Submitted job 5 with external jobid 'Your job 4846685 ("snakejob.star.5.sh") has been submitted'.
+
+[Sat Feb 24 18:11:24 2024]
+rule star:
+    input: samples/full_files/P7rep1_R1.fastq.gz, samples/full_files/P7rep1_R2.fastq.gz, results/m39_star
+    output: results/P7rep1.Aligned.out.bam
+    jobid: 7
+    reason: Missing output files: results/P7rep1.Aligned.out.bam
+    wildcards: sample=P7rep, rep=1
+    resources: tmpdir=<TBD>
+
+Submitted job 7 with external jobid 'Your job 4846686 ("snakejob.star.7.sh") has been submitted'.
+[Sat Feb 24 18:21:03 2024]
+Finished job 7.
+1 of 17 steps (6%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:21:03 2024]
+rule samtools_flagstat:
+    input: results/P7rep1.Aligned.out.bam
+    output: results/P7rep1.txt
+    jobid: 17
+    reason: Missing output files: results/P7rep1.txt; Input files updated by another job: results/P7rep1.Aligned.out.bam
+    wildcards: sample=P7rep, rep=1
+    resources: tmpdir=<TBD>
+
+Submitted job 17 with external jobid 'Your job 4846700 ("snakejob.samtools_flagstat.17.sh") has been submitted'.
+[Sat Feb 24 18:21:43 2024]
+Finished job 8.
+2 of 17 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:21:43 2024]
+rule samtools_flagstat:
+    input: results/P7rep2.Aligned.out.bam
+    output: results/P7rep2.txt
+    jobid: 18
+    reason: Missing output files: results/P7rep2.txt; Input files updated by another job: results/P7rep2.Aligned.out.bam
+    wildcards: sample=P7rep, rep=2
+    resources: tmpdir=<TBD>
+
+Submitted job 18 with external jobid 'Your job 4846702 ("snakejob.samtools_flagstat.18.sh") has been submitted'.
+[Sat Feb 24 18:22:23 2024]
+Finished job 3.
+3 of 17 steps (18%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:22:23 2024]
+rule samtools_flagstat:
+    input: results/P0rep1.Aligned.out.bam
+    output: results/P0rep1.txt
+    jobid: 13
+    reason: Missing output files: results/P0rep1.txt; Input files updated by another job: results/P0rep1.Aligned.out.bam
+    wildcards: sample=P0rep, rep=1
+    resources: tmpdir=<TBD>
+
+Submitted job 13 with external jobid 'Your job 4846703 ("snakejob.samtools_flagstat.13.sh") has been submitted'.
+[Sat Feb 24 18:23:04 2024]
+Finished job 2.
+4 of 17 steps (24%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:23:04 2024]
+rule samtools_flagstat:
+    input: results/ADrep2.Aligned.out.bam
+    output: results/ADrep2.txt
+    jobid: 12
+    reason: Missing output files: results/ADrep2.txt; Input files updated by another job: results/ADrep2.Aligned.out.bam
+    wildcards: sample=ADrep, rep=2
+    resources: tmpdir=<TBD>
+
+Submitted job 12 with external jobid 'Your job 4846704 ("snakejob.samtools_flagstat.12.sh") has been submitted'.
+[Sat Feb 24 18:23:04 2024]
+Finished job 5.
+5 of 17 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:23:04 2024]
+rule samtools_flagstat:
+    input: results/P4rep1.Aligned.out.bam
+    output: results/P4rep1.txt
+    jobid: 15
+    reason: Missing output files: results/P4rep1.txt; Input files updated by another job: results/P4rep1.Aligned.out.bam
+    wildcards: sample=P4rep, rep=1
+    resources: tmpdir=<TBD>
+
+Submitted job 15 with external jobid 'Your job 4846705 ("snakejob.samtools_flagstat.15.sh") has been submitted'.
+[Sat Feb 24 18:23:44 2024]
+Finished job 1.
+6 of 17 steps (35%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:23:44 2024]
+rule samtools_flagstat:
+    input: results/ADrep1.Aligned.out.bam
+    output: results/ADrep1.txt
+    jobid: 11
+    reason: Missing output files: results/ADrep1.txt; Input files updated by another job: results/ADrep1.Aligned.out.bam
+    wildcards: sample=ADrep, rep=1
+    resources: tmpdir=<TBD>
+
+Submitted job 11 with external jobid 'Your job 4846708 ("snakejob.samtools_flagstat.11.sh") has been submitted'.
+[Sat Feb 24 18:23:44 2024]
+Finished job 4.
+7 of 17 steps (41%) done
+[Sat Feb 24 18:23:44 2024]
+Finished job 17.
+8 of 17 steps (47%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:23:44 2024]
+rule samtools_flagstat:
+    input: results/P0rep2.Aligned.out.bam
+    output: results/P0rep2.txt
+    jobid: 14
+    reason: Missing output files: results/P0rep2.txt; Input files updated by another job: results/P0rep2.Aligned.out.bam
+    wildcards: sample=P0rep, rep=2
+    resources: tmpdir=<TBD>
+
+Submitted job 14 with external jobid 'Your job 4846709 ("snakejob.samtools_flagstat.14.sh") has been submitted'.
+[Sat Feb 24 18:24:24 2024]
+Finished job 6.
+9 of 17 steps (53%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:24:24 2024]
+rule samtools_flagstat:
+    input: results/P4rep2.Aligned.out.bam
+    output: results/P4rep2.txt
+    jobid: 16
+    reason: Missing output files: results/P4rep2.txt; Input files updated by another job: results/P4rep2.Aligned.out.bam
+    wildcards: sample=P4rep, rep=2
+    resources: tmpdir=<TBD>
+
+Submitted job 16 with external jobid 'Your job 4846711 ("snakejob.samtools_flagstat.16.sh") has been submitted'.
+[Sat Feb 24 18:26:04 2024]
+Finished job 18.
+10 of 17 steps (59%) done
+[Sat Feb 24 18:26:04 2024]
+Finished job 13.
+11 of 17 steps (65%) done
+[Sat Feb 24 18:26:04 2024]
+Finished job 12.
+12 of 17 steps (71%) done
+[Sat Feb 24 18:26:04 2024]
+Finished job 15.
+13 of 17 steps (76%) done
+[Sat Feb 24 18:27:34 2024]
+Finished job 11.
+14 of 17 steps (82%) done
+[Sat Feb 24 18:27:34 2024]
+Finished job 14.
+15 of 17 steps (88%) done
+[Sat Feb 24 18:27:34 2024]
+Finished job 16.
+16 of 17 steps (94%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 18:27:34 2024]
+localrule all:
+    input: results/ADrep1.Aligned.out.bam, results/ADrep2.Aligned.out.bam, results/P0rep1.Aligned.out.bam, results/P0rep2.Aligned.out.bam, results/P4rep1.Aligned.out.bam, results/P4rep2.Aligned.out.bam, results/P7rep1.Aligned.out.bam, results/P7rep2.Aligned.out.bam, results/GRCm39.fa.gz, results/m39_GA.gtf, results/ADrep1.txt, results/ADrep2.txt, results/P0rep1.txt, results/P0rep2.txt, results/P4rep1.txt, results/P4rep2.txt, results/P7rep1.txt, results/P7rep2.txt
+    jobid: 0
+    reason: Input files updated by another job: results/P4rep2.Aligned.out.bam, results/ADrep2.Aligned.out.bam, results/ADrep1.Aligned.out.bam, results/P7rep1.Aligned.out.bam, results/P0rep1.txt, results/P7rep2.Aligned.out.bam, results/P7rep2.txt, results/P0rep2.Aligned.out.bam, results/P4rep1.Aligned.out.bam, results/P0rep1.Aligned.out.bam, results/P4rep2.txt, results/P7rep1.txt, results/P0rep2.txt, results/ADrep1.txt, results/P4rep1.txt, results/ADrep2.txt
+    resources: tmpdir=/scratch
+
+[Sat Feb 24 18:27:34 2024]
+Finished job 0.
+17 of 17 steps (100%) done
+Complete log: .snakemake/log/2024-02-24T181122.350837.snakemake.log

@@ -1,0 +1,56 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+samtools_flagstat        1
+star                     1
+total                    3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 12 09:35:05 2024]
+localrule star:
+    input: samples/P7rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P7rep2subsample_R2Aligned.out.bam
+    jobid: 16
+    reason: Missing output files: results/P7rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P7rep, rep=2, number=2
+    resources: tmpdir=/scratch/4456235.1.academic-gpu
+
+[Mon Feb 12 09:35:06 2024]
+Finished job 16.
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 12 09:35:06 2024]
+localrule samtools_flagstat:
+    input: results/P7rep2subsample_R2Aligned.out.bam
+    output: results/P7rep2subsample_R2.txt
+    jobid: 34
+    reason: Missing output files: results/P7rep2subsample_R2.txt; Input files updated by another job: results/P7rep2subsample_R2Aligned.out.bam
+    wildcards: sample=P7rep, rep=2, number=2
+    resources: tmpdir=/scratch/4456235.1.academic-gpu
+
+[Mon Feb 12 09:35:06 2024]
+Finished job 34.
+2 of 3 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 12 09:35:06 2024]
+localrule all:
+    input: results/ADrep1subsample_R1Aligned.out.bam, results/ADrep1subsample_R2Aligned.out.bam, results/ADrep2subsample_R1Aligned.out.bam, results/ADrep2subsample_R2Aligned.out.bam, results/P0rep1subsample_R1Aligned.out.bam, results/P0rep1subsample_R2Aligned.out.bam, results/P0rep2subsample_R1Aligned.out.bam, results/P0rep2subsample_R2Aligned.out.bam, results/P4rep1subsample_R1Aligned.out.bam, results/P4rep1subsample_R2Aligned.out.bam, results/P4rep2subsample_R1Aligned.out.bam, results/P4rep2subsample_R2Aligned.out.bam, results/P7rep1subsample_R1Aligned.out.bam, results/P7rep1subsample_R2Aligned.out.bam, results/P7rep2subsample_R1Aligned.out.bam, results/P7rep2subsample_R2Aligned.out.bam, results/GRCm39.fa.gz, results/m39_GA.gtf, results/ADrep1subsample_R1.txt, results/ADrep1subsample_R2.txt, results/ADrep2subsample_R1.txt, results/ADrep2subsample_R2.txt, results/P0rep1subsample_R1.txt, results/P0rep1subsample_R2.txt, results/P0rep2subsample_R1.txt, results/P0rep2subsample_R2.txt, results/P4rep1subsample_R1.txt, results/P4rep1subsample_R2.txt, results/P4rep2subsample_R1.txt, results/P4rep2subsample_R2.txt, results/P7rep1subsample_R1.txt, results/P7rep1subsample_R2.txt, results/P7rep2subsample_R1.txt, results/P7rep2subsample_R2.txt
+    jobid: 0
+    reason: Input files updated by another job: results/P7rep2subsample_R2.txt, results/P7rep2subsample_R2Aligned.out.bam
+    resources: tmpdir=/scratch/4456235.1.academic-gpu
+
+[Mon Feb 12 09:35:06 2024]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: .snakemake/log/2024-02-12T093503.001639.snakemake.log

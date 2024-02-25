@@ -1,0 +1,31 @@
+# we have given you the rules you will need to fill out remember when structuring your dependencies, 
+# we are only downloading the GTF and genome.fa, we will not be doing anything further with them this week
+
+rule all:
+	input:
+		expand('results/{sample}{rep}subsample_R{number}Aligned.out.bam', sample=['AD', 'P0', 'P4', 'P7'], rep = ['rep1', 'rep2'], number=[1,2]),
+		expand('results/{sample}{rep}subsample_R{number}.txt', sample = ['AD', 'P0', 'P4', 'P7'], rep = ['rep1', 'rep2'], number= [1,2])
+
+#make sure to read up on how STAR names it output files	
+rule star:
+	input:
+		fastq = 'samples/{sample}{rep}subsample_R{number}.fastq.gz',
+		Genome_index = 'samples/m39_subset_star/'
+	output:	
+		bam = 'results/{sample}{rep}subsample_R{number}Aligned.out.bam'
+	params:
+		outdir = 'results/'
+	shell:
+		'''
+		STAR --genomeDir {input.Genome_index}/ --readFilesCommand zcat --readFilesIn {input.fastq} --outSAMtype BAM Unsorted --outFileNamePrefix {params.outdir}/{wildcards.sample}{wildcards.rep}subsample_R{wildcards.number}
+		'''
+
+rule samtools_flagstat:
+	input:
+		bam = 'results/{sample}{rep}subsample_R{number}Aligned.out.bam'
+	output:
+		flagstat = 'results/{sample}{rep}subsample_R{number}.txt'
+	shell:
+		'''
+		samtools flagstat {input.bam} > {output.flagstat}
+		'''

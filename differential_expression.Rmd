@@ -2,6 +2,83 @@
 title: "Differential Expression"
 output: html_document
 ---
-
+ 
 Use this notebook to perform differential expression and all other post-DE
 analyses. 
+
+### Setting up the correct working directory
+```{r}
+setwd("/projectnb/bf528/students/jawa/project-1-template-jawa23bio")
+```
+
+### Loading the necessary libraries
+```{r}
+library(tidyverse)
+library(DESeq2)
+```
+
+### Load the counts data
+```{r} 
+counts_matrix <- read.csv("results/full_filtered_counts_matrix.csv", row.names = 1)
+
+# Displaying the first 5 entries from the file
+head(counts_matrix)
+```
+
+### Sample information
+```{r}
+coldata <- data.frame(
+  sample = colnames(counts_matrix)
+)
+coldata$timepoint <- substr(coldata$sample, 1, 2)
+
+coldata
+```
+
+### Create DESeqDataSet object
+```{r}
+dds <- DESeqDataSetFromMatrix(countData = counts_matrix, colData = coldata, design = ~ timepoint)
+```
+
+### Perform differential expression analysis
+```{r}
+dds <- DESeq(dds)
+```
+
+### Contrast for differential expression analysis (AD vs p0)
+```{r}
+contrast <- c("timepoint", "AD", "P0")
+```
+
+### DE Results for the specified contrast
+```{r}
+results_AD_P0 <- results(dds, contrast = contrast)
+results_AD_P0
+```
+
+### DE Results in a tibble
+```{r}
+results <- as_tibble(results_AD_P0)
+results$gene_id <- rownames(results_AD_P0)
+results <- results %>% select(gene_id, everything())
+
+results
+```
+
+## _Gene Map Information_
+
+### Reading gene map data
+```{r}
+gene_map <- read.csv("results/full_genemap.csv", header = TRUE)
+
+# Displaying the first 5 entries from the file
+head(gene_map)
+```
+
+### Joining gene names to results tibble
+```{r}
+results <- left_join(results, gene_map, by = "gene_id")
+results <- results %>% select(gene_id, gene_name, everything())
+
+results
+```

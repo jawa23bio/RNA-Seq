@@ -1,0 +1,42 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+parse_gtf        1
+total            2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Feb 23 22:39:10 2024]
+localrule parse_gtf:
+    input: results/m39_GA.gtf
+    output: results/genemap.csv
+    jobid: 10
+    reason: Missing output files: results/genemap.csv
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+        python parse_gtf.py -i results/m39_GA.gtf -o results/genemap.csv
+        
+[Fri Feb 23 22:39:11 2024]
+Finished job 10.
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Feb 23 22:39:11 2024]
+localrule all:
+    input: results/ADrep1subsample.exon.txt, results/ADrep2subsample.exon.txt, results/P0rep1subsample.exon.txt, results/P0rep2subsample.exon.txt, results/P4rep1subsample.exon.txt, results/P4rep2subsample.exon.txt, results/P7rep1subsample.exon.txt, results/P7rep2subsample.exon.txt, results/matrix.csv, results/genemap.csv
+    jobid: 0
+    reason: Input files updated by another job: results/genemap.csv
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+[Fri Feb 23 22:39:11 2024]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2024-02-23T223909.601192.snakemake.log

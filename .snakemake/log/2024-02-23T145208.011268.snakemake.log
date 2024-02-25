@@ -1,0 +1,4 @@
+Building DAG of jobs...
+WildcardError in rule verse in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week3.snake, line 11:
+Wildcards in params cannot be determined from output files. Note that you have to use a function to deactivate automatic wildcard expansion in params strings, e.g., `lambda wildcards: '{test}'`. Also see https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#non-file-parameters-for-rules: (rule verse, line 18, /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week3.snake)
+'sample'

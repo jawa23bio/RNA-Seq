@@ -1,0 +1,266 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 18
+Job stats:
+job        count
+-------  -------
+all            1
+fastqc        16
+multiqc        1
+total         18
+
+Select jobs to execute...
+Execute 16 jobs...
+
+[Sat Feb 24 17:09:21 2024]
+rule fastqc:
+    input: samples/full_files/P0rep2_R2.fastq.gz
+    output: results/P0rep2_R2_fastqc.html
+    jobid: 9
+    reason: Missing output files: results/P0rep2_R2_fastqc.html; Updated input files: samples/full_files/P0rep2_R2.fastq.gz
+    wildcards: sample=P0rep, rep=2, number=2
+    resources: tmpdir=<TBD>
+
+Submitted job 9 with external jobid 'Your job 4846021 ("snakejob.fastqc.9.sh") has been submitted'.
+
+[Sat Feb 24 17:09:21 2024]
+rule fastqc:
+    input: samples/full_files/ADrep2_R1.fastq.gz
+    output: results/ADrep2_R1_fastqc.html
+    jobid: 4
+    reason: Missing output files: results/ADrep2_R1_fastqc.html; Updated input files: samples/full_files/ADrep2_R1.fastq.gz
+    wildcards: sample=ADrep, rep=2, number=1
+    resources: tmpdir=<TBD>
+
+Submitted job 4 with external jobid 'Your job 4846022 ("snakejob.fastqc.4.sh") has been submitted'.
+
+[Sat Feb 24 17:09:21 2024]
+rule fastqc:
+    input: samples/full_files/P0rep1_R2.fastq.gz
+    output: results/P0rep1_R2_fastqc.html
+    jobid: 7
+    reason: Missing output files: results/P0rep1_R2_fastqc.html; Updated input files: samples/full_files/P0rep1_R2.fastq.gz
+    wildcards: sample=P0rep, rep=1, number=2
+    resources: tmpdir=<TBD>
+
+Submitted job 7 with external jobid 'Your job 4846023 ("snakejob.fastqc.7.sh") has been submitted'.
+
+[Sat Feb 24 17:09:21 2024]
+rule fastqc:
+    input: samples/full_files/ADrep1_R2.fastq.gz
+    output: results/ADrep1_R2_fastqc.html
+    jobid: 3
+    reason: Missing output files: results/ADrep1_R2_fastqc.html; Updated input files: samples/full_files/ADrep1_R2.fastq.gz
+    wildcards: sample=ADrep, rep=1, number=2
+    resources: tmpdir=<TBD>
+
+Submitted job 3 with external jobid 'Your job 4846024 ("snakejob.fastqc.3.sh") has been submitted'.
+
+[Sat Feb 24 17:09:21 2024]
+rule fastqc:
+    input: samples/full_files/P4rep1_R2.fastq.gz
+    output: results/P4rep1_R2_fastqc.html
+    jobid: 11
+    reason: Missing output files: results/P4rep1_R2_fastqc.html; Updated input files: samples/full_files/P4rep1_R2.fastq.gz
+    wildcards: sample=P4rep, rep=1, number=2
+    resources: tmpdir=<TBD>
+
+Submitted job 11 with external jobid 'Your job 4846025 ("snakejob.fastqc.11.sh") has been submitted'.
+
+[Sat Feb 24 17:09:22 2024]
+rule fastqc:
+    input: samples/full_files/P4rep2_R2.fastq.gz
+    output: results/P4rep2_R2_fastqc.html
+    jobid: 13
+    reason: Missing output files: results/P4rep2_R2_fastqc.html; Updated input files: samples/full_files/P4rep2_R2.fastq.gz
+    wildcards: sample=P4rep, rep=2, number=2
+    resources: tmpdir=<TBD>
+
+Submitted job 13 with external jobid 'Your job 4846026 ("snakejob.fastqc.13.sh") has been submitted'.
+
+[Sat Feb 24 17:09:22 2024]
+rule fastqc:
+    input: samples/full_files/P7rep1_R2.fastq.gz
+    output: results/P7rep1_R2_fastqc.html
+    jobid: 15
+    reason: Missing output files: results/P7rep1_R2_fastqc.html; Updated input files: samples/full_files/P7rep1_R2.fastq.gz
+    wildcards: sample=P7rep, rep=1, number=2
+    resources: tmpdir=<TBD>
+
+Submitted job 15 with external jobid 'Your job 4846027 ("snakejob.fastqc.15.sh") has been submitted'.
+
+[Sat Feb 24 17:09:22 2024]
+rule fastqc:
+    input: samples/full_files/P7rep2_R2.fastq.gz
+    output: results/P7rep2_R2_fastqc.html
+    jobid: 17
+    reason: Missing output files: results/P7rep2_R2_fastqc.html; Updated input files: samples/full_files/P7rep2_R2.fastq.gz
+    wildcards: sample=P7rep, rep=2, number=2
+    resources: tmpdir=<TBD>
+
+Submitted job 17 with external jobid 'Your job 4846028 ("snakejob.fastqc.17.sh") has been submitted'.
+
+[Sat Feb 24 17:09:22 2024]
+rule fastqc:
+    input: samples/full_files/ADrep1_R1.fastq.gz
+    output: results/ADrep1_R1_fastqc.html
+    jobid: 2
+    reason: Missing output files: results/ADrep1_R1_fastqc.html; Updated input files: samples/full_files/ADrep1_R1.fastq.gz
+    wildcards: sample=ADrep, rep=1, number=1
+    resources: tmpdir=<TBD>
+
+Submitted job 2 with external jobid 'Your job 4846029 ("snakejob.fastqc.2.sh") has been submitted'.
+
+[Sat Feb 24 17:09:22 2024]
+rule fastqc:
+    input: samples/full_files/ADrep2_R2.fastq.gz
+    output: results/ADrep2_R2_fastqc.html
+    jobid: 5
+    reason: Missing output files: results/ADrep2_R2_fastqc.html; Updated input files: samples/full_files/ADrep2_R2.fastq.gz
+    wildcards: sample=ADrep, rep=2, number=2
+    resources: tmpdir=<TBD>
+
+Submitted job 5 with external jobid 'Your job 4846031 ("snakejob.fastqc.5.sh") has been submitted'.
+
+[Sat Feb 24 17:09:22 2024]
+rule fastqc:
+    input: samples/full_files/P0rep1_R1.fastq.gz
+    output: results/P0rep1_R1_fastqc.html
+    jobid: 6
+    reason: Missing output files: results/P0rep1_R1_fastqc.html; Updated input files: samples/full_files/P0rep1_R1.fastq.gz
+    wildcards: sample=P0rep, rep=1, number=1
+    resources: tmpdir=<TBD>
+
+Submitted job 6 with external jobid 'Your job 4846032 ("snakejob.fastqc.6.sh") has been submitted'.
+
+[Sat Feb 24 17:09:22 2024]
+rule fastqc:
+    input: samples/full_files/P0rep2_R1.fastq.gz
+    output: results/P0rep2_R1_fastqc.html
+    jobid: 8
+    reason: Missing output files: results/P0rep2_R1_fastqc.html; Updated input files: samples/full_files/P0rep2_R1.fastq.gz
+    wildcards: sample=P0rep, rep=2, number=1
+    resources: tmpdir=<TBD>
+
+Submitted job 8 with external jobid 'Your job 4846033 ("snakejob.fastqc.8.sh") has been submitted'.
+
+[Sat Feb 24 17:09:22 2024]
+rule fastqc:
+    input: samples/full_files/P4rep1_R1.fastq.gz
+    output: results/P4rep1_R1_fastqc.html
+    jobid: 10
+    reason: Missing output files: results/P4rep1_R1_fastqc.html; Updated input files: samples/full_files/P4rep1_R1.fastq.gz
+    wildcards: sample=P4rep, rep=1, number=1
+    resources: tmpdir=<TBD>
+
+Submitted job 10 with external jobid 'Your job 4846034 ("snakejob.fastqc.10.sh") has been submitted'.
+
+[Sat Feb 24 17:09:22 2024]
+rule fastqc:
+    input: samples/full_files/P4rep2_R1.fastq.gz
+    output: results/P4rep2_R1_fastqc.html
+    jobid: 12
+    reason: Missing output files: results/P4rep2_R1_fastqc.html; Updated input files: samples/full_files/P4rep2_R1.fastq.gz
+    wildcards: sample=P4rep, rep=2, number=1
+    resources: tmpdir=<TBD>
+
+Submitted job 12 with external jobid 'Your job 4846035 ("snakejob.fastqc.12.sh") has been submitted'.
+
+[Sat Feb 24 17:09:22 2024]
+rule fastqc:
+    input: samples/full_files/P7rep1_R1.fastq.gz
+    output: results/P7rep1_R1_fastqc.html
+    jobid: 14
+    reason: Missing output files: results/P7rep1_R1_fastqc.html; Updated input files: samples/full_files/P7rep1_R1.fastq.gz
+    wildcards: sample=P7rep, rep=1, number=1
+    resources: tmpdir=<TBD>
+
+Submitted job 14 with external jobid 'Your job 4846036 ("snakejob.fastqc.14.sh") has been submitted'.
+
+[Sat Feb 24 17:09:23 2024]
+rule fastqc:
+    input: samples/full_files/P7rep2_R1.fastq.gz
+    output: results/P7rep2_R1_fastqc.html
+    jobid: 16
+    reason: Missing output files: results/P7rep2_R1_fastqc.html; Updated input files: samples/full_files/P7rep2_R1.fastq.gz
+    wildcards: sample=P7rep, rep=2, number=1
+    resources: tmpdir=<TBD>
+
+Submitted job 16 with external jobid 'Your job 4846037 ("snakejob.fastqc.16.sh") has been submitted'.
+[Sat Feb 24 17:12:52 2024]
+Finished job 11.
+1 of 18 steps (6%) done
+[Sat Feb 24 17:12:52 2024]
+Finished job 13.
+2 of 18 steps (11%) done
+[Sat Feb 24 17:12:52 2024]
+Finished job 15.
+3 of 18 steps (17%) done
+[Sat Feb 24 17:12:52 2024]
+Finished job 17.
+4 of 18 steps (22%) done
+[Sat Feb 24 17:12:52 2024]
+Finished job 2.
+5 of 18 steps (28%) done
+[Sat Feb 24 17:12:52 2024]
+Finished job 5.
+6 of 18 steps (33%) done
+[Sat Feb 24 17:13:32 2024]
+Finished job 9.
+7 of 18 steps (39%) done
+[Sat Feb 24 17:13:32 2024]
+Finished job 4.
+8 of 18 steps (44%) done
+[Sat Feb 24 17:13:32 2024]
+Finished job 7.
+9 of 18 steps (50%) done
+[Sat Feb 24 17:13:32 2024]
+Finished job 3.
+10 of 18 steps (56%) done
+[Sat Feb 24 17:13:32 2024]
+Finished job 6.
+11 of 18 steps (61%) done
+[Sat Feb 24 17:13:32 2024]
+Finished job 10.
+12 of 18 steps (67%) done
+[Sat Feb 24 17:13:32 2024]
+Finished job 14.
+13 of 18 steps (72%) done
+[Sat Feb 24 17:13:32 2024]
+Finished job 16.
+14 of 18 steps (78%) done
+[Sat Feb 24 17:14:02 2024]
+Finished job 8.
+15 of 18 steps (83%) done
+[Sat Feb 24 17:14:02 2024]
+Finished job 12.
+16 of 18 steps (89%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 17:14:02 2024]
+rule multiqc:
+    input: results/ADrep1_R1_fastqc.html, results/ADrep1_R2_fastqc.html, results/ADrep2_R1_fastqc.html, results/ADrep2_R2_fastqc.html, results/P0rep1_R1_fastqc.html, results/P0rep1_R2_fastqc.html, results/P0rep2_R1_fastqc.html, results/P0rep2_R2_fastqc.html, results/P4rep1_R1_fastqc.html, results/P4rep1_R2_fastqc.html, results/P4rep2_R1_fastqc.html, results/P4rep2_R2_fastqc.html, results/P7rep1_R1_fastqc.html, results/P7rep1_R2_fastqc.html, results/P7rep2_R1_fastqc.html, results/P7rep2_R2_fastqc.html
+    output: results/multiqc_report.html
+    jobid: 1
+    reason: Input files updated by another job: results/P0rep2_R1_fastqc.html, results/P4rep1_R1_fastqc.html, results/P7rep2_R1_fastqc.html, results/P0rep2_R2_fastqc.html, results/P0rep1_R1_fastqc.html, results/ADrep1_R1_fastqc.html, results/P4rep2_R1_fastqc.html, results/P7rep1_R2_fastqc.html, results/ADrep2_R2_fastqc.html, results/ADrep2_R1_fastqc.html, results/P4rep1_R2_fastqc.html, results/P7rep1_R1_fastqc.html, results/P0rep1_R2_fastqc.html, results/ADrep1_R2_fastqc.html, results/P7rep2_R2_fastqc.html, results/P4rep2_R2_fastqc.html
+    resources: tmpdir=<TBD>
+
+Submitted job 1 with external jobid 'Your job 4846052 ("snakejob.multiqc.1.sh") has been submitted'.
+[Sat Feb 24 17:18:33 2024]
+Finished job 1.
+17 of 18 steps (94%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 17:18:33 2024]
+localrule all:
+    input: results/multiqc_report.html
+    jobid: 0
+    reason: Input files updated by another job: results/multiqc_report.html
+    resources: tmpdir=/scratch
+
+[Sat Feb 24 17:18:33 2024]
+Finished job 0.
+18 of 18 steps (100%) done
+Complete log: .snakemake/log/2024-02-24T170920.237860.snakemake.log

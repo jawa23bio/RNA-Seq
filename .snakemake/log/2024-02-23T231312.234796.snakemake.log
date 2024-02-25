@@ -1,0 +1,207 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count
+-------------  -------
+all                  1
+concat_df            1
+filter_counts        1
+parse_gtf            1
+verse                8
+total               12
+
+Select jobs to execute...
+Execute 9 jobs...
+
+[Fri Feb 23 23:13:13 2024]
+localrule verse:
+    input: results/P4rep2subsample.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P4rep2subsample.exon.txt
+    jobid: 6
+    reason: Missing output files: results/P4rep2subsample.exon.txt
+    wildcards: sample=P4rep2subsample
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+        verse -S -a results/m39_GA.gtf -o results/P4rep2subsample results/P4rep2subsample.Aligned.out.bam
+        
+
+[Fri Feb 23 23:13:13 2024]
+localrule verse:
+    input: results/P7rep2subsample.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P7rep2subsample.exon.txt
+    jobid: 8
+    reason: Missing output files: results/P7rep2subsample.exon.txt
+    wildcards: sample=P7rep2subsample
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+        verse -S -a results/m39_GA.gtf -o results/P7rep2subsample results/P7rep2subsample.Aligned.out.bam
+        
+
+[Fri Feb 23 23:13:13 2024]
+localrule parse_gtf:
+    input: results/m39_GA.gtf
+    output: results/genemap.csv
+    jobid: 10
+    reason: Missing output files: results/genemap.csv
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+        python parse_gtf.py -i results/m39_GA.gtf -o results/genemap.csv
+        
+
+[Fri Feb 23 23:13:13 2024]
+localrule verse:
+    input: results/P0rep2subsample.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P0rep2subsample.exon.txt
+    jobid: 4
+    reason: Missing output files: results/P0rep2subsample.exon.txt
+    wildcards: sample=P0rep2subsample
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+        verse -S -a results/m39_GA.gtf -o results/P0rep2subsample results/P0rep2subsample.Aligned.out.bam
+        
+
+[Fri Feb 23 23:13:13 2024]
+localrule verse:
+    input: results/ADrep1subsample.Aligned.out.bam, results/m39_GA.gtf
+    output: results/ADrep1subsample.exon.txt
+    jobid: 1
+    reason: Missing output files: results/ADrep1subsample.exon.txt
+    wildcards: sample=ADrep1subsample
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+        verse -S -a results/m39_GA.gtf -o results/ADrep1subsample results/ADrep1subsample.Aligned.out.bam
+        
+
+[Fri Feb 23 23:13:13 2024]
+localrule verse:
+    input: results/P0rep1subsample.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P0rep1subsample.exon.txt
+    jobid: 3
+    reason: Missing output files: results/P0rep1subsample.exon.txt
+    wildcards: sample=P0rep1subsample
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+        verse -S -a results/m39_GA.gtf -o results/P0rep1subsample results/P0rep1subsample.Aligned.out.bam
+        
+
+[Fri Feb 23 23:13:13 2024]
+localrule verse:
+    input: results/ADrep2subsample.Aligned.out.bam, results/m39_GA.gtf
+    output: results/ADrep2subsample.exon.txt
+    jobid: 2
+    reason: Missing output files: results/ADrep2subsample.exon.txt
+    wildcards: sample=ADrep2subsample
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+        verse -S -a results/m39_GA.gtf -o results/ADrep2subsample results/ADrep2subsample.Aligned.out.bam
+        
+
+[Fri Feb 23 23:13:13 2024]
+localrule verse:
+    input: results/P4rep1subsample.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P4rep1subsample.exon.txt
+    jobid: 5
+    reason: Missing output files: results/P4rep1subsample.exon.txt
+    wildcards: sample=P4rep1subsample
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+        verse -S -a results/m39_GA.gtf -o results/P4rep1subsample results/P4rep1subsample.Aligned.out.bam
+        
+
+[Fri Feb 23 23:13:13 2024]
+localrule verse:
+    input: results/P7rep1subsample.Aligned.out.bam, results/m39_GA.gtf
+    output: results/P7rep1subsample.exon.txt
+    jobid: 7
+    reason: Missing output files: results/P7rep1subsample.exon.txt
+    wildcards: sample=P7rep1subsample
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+        verse -S -a results/m39_GA.gtf -o results/P7rep1subsample results/P7rep1subsample.Aligned.out.bam
+        
+[Fri Feb 23 23:13:14 2024]
+Finished job 10.
+1 of 12 steps (8%) done
+[Fri Feb 23 23:13:19 2024]
+Finished job 4.
+2 of 12 steps (17%) done
+[Fri Feb 23 23:13:19 2024]
+Finished job 8.
+3 of 12 steps (25%) done
+[Fri Feb 23 23:13:19 2024]
+Finished job 3.
+4 of 12 steps (33%) done
+[Fri Feb 23 23:13:19 2024]
+Finished job 5.
+5 of 12 steps (42%) done
+[Fri Feb 23 23:13:19 2024]
+Finished job 7.
+6 of 12 steps (50%) done
+[Fri Feb 23 23:13:19 2024]
+Finished job 2.
+7 of 12 steps (58%) done
+[Fri Feb 23 23:13:19 2024]
+Finished job 1.
+8 of 12 steps (67%) done
+[Fri Feb 23 23:13:19 2024]
+Finished job 6.
+9 of 12 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Feb 23 23:13:19 2024]
+localrule concat_df:
+    input: results/ADrep1subsample.exon.txt, results/ADrep2subsample.exon.txt, results/P0rep1subsample.exon.txt, results/P0rep2subsample.exon.txt, results/P4rep1subsample.exon.txt, results/P4rep2subsample.exon.txt, results/P7rep1subsample.exon.txt, results/P7rep2subsample.exon.txt
+    output: results/matrix.csv
+    jobid: 9
+    reason: Missing output files: results/matrix.csv; Input files updated by another job: results/P7rep1subsample.exon.txt, results/P0rep1subsample.exon.txt, results/P7rep2subsample.exon.txt, results/ADrep2subsample.exon.txt, results/P0rep2subsample.exon.txt, results/P4rep2subsample.exon.txt, results/P4rep1subsample.exon.txt, results/ADrep1subsample.exon.txt
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+    python concat_df.py -i results/ADrep1subsample.exon.txt results/ADrep2subsample.exon.txt results/P0rep1subsample.exon.txt results/P0rep2subsample.exon.txt results/P4rep1subsample.exon.txt results/P4rep2subsample.exon.txt results/P7rep1subsample.exon.txt results/P7rep2subsample.exon.txt -o results/matrix.csv
+    
+[Fri Feb 23 23:13:20 2024]
+Finished job 9.
+10 of 12 steps (83%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Feb 23 23:13:20 2024]
+localrule filter_counts:
+    input: results/matrix.csv
+    output: results/filtered_counts_matrix.csv
+    jobid: 11
+    reason: Missing output files: results/filtered_counts_matrix.csv; Input files updated by another job: results/matrix.csv
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+
+        python filter_cts_mat.py -i results/matrix.csv -o results/filtered_counts_matrix.csv
+        
+[Fri Feb 23 23:13:20 2024]
+Finished job 11.
+11 of 12 steps (92%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Feb 23 23:13:20 2024]
+localrule all:
+    input: results/ADrep1subsample.exon.txt, results/ADrep2subsample.exon.txt, results/P0rep1subsample.exon.txt, results/P0rep2subsample.exon.txt, results/P4rep1subsample.exon.txt, results/P4rep2subsample.exon.txt, results/P7rep1subsample.exon.txt, results/P7rep2subsample.exon.txt, results/matrix.csv, results/genemap.csv, results/filtered_counts_matrix.csv
+    jobid: 0
+    reason: Input files updated by another job: results/P7rep2subsample.exon.txt, results/P7rep1subsample.exon.txt, results/genemap.csv, results/P4rep2subsample.exon.txt, results/filtered_counts_matrix.csv, results/P0rep1subsample.exon.txt, results/ADrep2subsample.exon.txt, results/P0rep2subsample.exon.txt, results/P4rep1subsample.exon.txt, results/ADrep1subsample.exon.txt, results/matrix.csv
+    resources: tmpdir=/scratch/4801441.1.academic-gpu
+
+[Fri Feb 23 23:13:20 2024]
+Finished job 0.
+12 of 12 steps (100%) done
+Complete log: .snakemake/log/2024-02-23T231312.234796.snakemake.log

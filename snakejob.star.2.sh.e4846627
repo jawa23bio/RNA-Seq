@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 17:51:06 2024]
+localrule star:
+    input: samples/full_files/ADrep2_R1.fastq.gz, samples/full_files/ADrep2_R2.fastq.gz, results/m39_star
+    output: results/ADrep2.Aligned.out.bam
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=ADrep, rep=2
+    resources: mem_mb=3407, mem_mib=3250, disk_mb=3407, disk_mib=3250, tmpdir=/scratch/4846627.1.academic
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule star in file /projectnb/bf528/students/jawa/project-1-template-jawa23bio/week2.snake, line 31:
+Job 0 completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+results/ADrep2.Aligned.out.bam
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.

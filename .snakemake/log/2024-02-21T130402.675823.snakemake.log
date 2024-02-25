@@ -1,0 +1,264 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+get_m39                  1
+get_m39_gtf              1
+samtools_flagstat        8
+star                     8
+total                   19
+
+Select jobs to execute...
+Execute 10 jobs...
+
+[Wed Feb 21 13:04:03 2024]
+localrule star:
+    input: samples/P4rep1subsample_R1.fastq.gz, samples/P4rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P4rep1subsample.Aligned.out.bam
+    jobid: 5
+    reason: Missing output files: results/P4rep1subsample.Aligned.out.bam
+    wildcards: sample=P4rep, rep=1
+    resources: tmpdir=/scratch/4631077.1.academic-gpu
+
+
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P4rep1subsample_R1.fastq.gz samples/P4rep1subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P4rep1subsample.
+		
+
+[Wed Feb 21 13:04:03 2024]
+localrule star:
+    input: samples/P7rep1subsample_R1.fastq.gz, samples/P7rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P7rep1subsample.Aligned.out.bam
+    jobid: 7
+    reason: Missing output files: results/P7rep1subsample.Aligned.out.bam
+    wildcards: sample=P7rep, rep=1
+    resources: tmpdir=/scratch/4631077.1.academic-gpu
+
+
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P7rep1subsample_R1.fastq.gz samples/P7rep1subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P7rep1subsample.
+		
+
+[Wed Feb 21 13:04:03 2024]
+localrule get_m39:
+    output: results/GRCm39.fa.gz
+    jobid: 9
+    reason: Forced execution
+    resources: tmpdir=/scratch/4631077.1.academic-gpu
+
+
+		wget -O results/GRCm39.fa.gz https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M34/GRCm39.primary_assembly.genome.fa.gz
+		
+
+[Wed Feb 21 13:04:03 2024]
+localrule star:
+    input: samples/P0rep1subsample_R1.fastq.gz, samples/P0rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P0rep1subsample.Aligned.out.bam
+    jobid: 3
+    reason: Missing output files: results/P0rep1subsample.Aligned.out.bam
+    wildcards: sample=P0rep, rep=1
+    resources: tmpdir=/scratch/4631077.1.academic-gpu
+
+
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P0rep1subsample_R1.fastq.gz samples/P0rep1subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P0rep1subsample.
+		
+
+[Wed Feb 21 13:04:03 2024]
+localrule star:
+    input: samples/ADrep2subsample_R1.fastq.gz, samples/ADrep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/ADrep2subsample.Aligned.out.bam
+    jobid: 2
+    reason: Missing output files: results/ADrep2subsample.Aligned.out.bam
+    wildcards: sample=ADrep, rep=2
+    resources: tmpdir=/scratch/4631077.1.academic-gpu
+
+
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/ADrep2subsample_R1.fastq.gz samples/ADrep2subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//ADrep2subsample.
+		
+
+[Wed Feb 21 13:04:03 2024]
+localrule star:
+    input: samples/P7rep2subsample_R1.fastq.gz, samples/P7rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P7rep2subsample.Aligned.out.bam
+    jobid: 8
+    reason: Missing output files: results/P7rep2subsample.Aligned.out.bam
+    wildcards: sample=P7rep, rep=2
+    resources: tmpdir=/scratch/4631077.1.academic-gpu
+
+
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P7rep2subsample_R1.fastq.gz samples/P7rep2subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P7rep2subsample.
+		
+
+[Wed Feb 21 13:04:03 2024]
+localrule star:
+    input: samples/ADrep1subsample_R1.fastq.gz, samples/ADrep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/ADrep1subsample.Aligned.out.bam
+    jobid: 1
+    reason: Missing output files: results/ADrep1subsample.Aligned.out.bam
+    wildcards: sample=ADrep, rep=1
+    resources: tmpdir=/scratch/4631077.1.academic-gpu
+
+
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/ADrep1subsample_R1.fastq.gz samples/ADrep1subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//ADrep1subsample.
+		
+
+[Wed Feb 21 13:04:03 2024]
+localrule get_m39_gtf:
+    output: results/m39_GA.gtf
+    jobid: 10
+    reason: Missing output files: results/m39_GA.gtf
+    resources: tmpdir=/scratch/4631077.1.academic-gpu
+
+
+		wget -O results/m39_GA.gtf.gz https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M34/gencode.vM34.chr_patch_hapl_scaff.annotation.gtf.gz
+		gunzip -k results/m39_GA.gtf
+		
+
+[Wed Feb 21 13:04:03 2024]
+localrule star:
+    input: samples/P0rep2subsample_R1.fastq.gz, samples/P0rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P0rep2subsample.Aligned.out.bam
+    jobid: 4
+    reason: Missing output files: results/P0rep2subsample.Aligned.out.bam
+    wildcards: sample=P0rep, rep=2
+    resources: tmpdir=/scratch/4631077.1.academic-gpu
+
+
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P0rep2subsample_R1.fastq.gz samples/P0rep2subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P0rep2subsample.
+		
+
+[Wed Feb 21 13:04:03 2024]
+localrule star:
+    input: samples/P4rep2subsample_R1.fastq.gz, samples/P4rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P4rep2subsample.Aligned.out.bam
+    jobid: 6
+    reason: Missing output files: results/P4rep2subsample.Aligned.out.bam
+    wildcards: sample=P4rep, rep=2
+    resources: tmpdir=/scratch/4631077.1.academic-gpu
+
+
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P4rep2subsample_R1.fastq.gz samples/P4rep2subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P4rep2subsample.
+		
+[Wed Feb 21 13:04:03 2024]
+Error in rule star:
+    jobid: 5
+    input: samples/P4rep1subsample_R1.fastq.gz, samples/P4rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P4rep1subsample.Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P4rep1subsample_R1.fastq.gz samples/P4rep1subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P4rep1subsample.
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Wed Feb 21 13:04:03 2024]
+Error in rule star:
+    jobid: 7
+    input: samples/P7rep1subsample_R1.fastq.gz, samples/P7rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P7rep1subsample.Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P7rep1subsample_R1.fastq.gz samples/P7rep1subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P7rep1subsample.
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job star since they might be corrupted:
+results/P4rep1subsample.Aligned.out.bam
+Removing output files of failed job star since they might be corrupted:
+results/P7rep1subsample.Aligned.out.bam
+[Wed Feb 21 13:04:03 2024]
+Error in rule star:
+    jobid: 8
+    input: samples/P7rep2subsample_R1.fastq.gz, samples/P7rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P7rep2subsample.Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P7rep2subsample_R1.fastq.gz samples/P7rep2subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P7rep2subsample.
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job star since they might be corrupted:
+results/P7rep2subsample.Aligned.out.bam
+[Wed Feb 21 13:04:03 2024]
+Error in rule star:
+    jobid: 3
+    input: samples/P0rep1subsample_R1.fastq.gz, samples/P0rep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P0rep1subsample.Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P0rep1subsample_R1.fastq.gz samples/P0rep1subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P0rep1subsample.
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job star since they might be corrupted:
+results/P0rep1subsample.Aligned.out.bam
+[Wed Feb 21 13:04:03 2024]
+Error in rule star:
+    jobid: 2
+    input: samples/ADrep2subsample_R1.fastq.gz, samples/ADrep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/ADrep2subsample.Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/ADrep2subsample_R1.fastq.gz samples/ADrep2subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//ADrep2subsample.
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job star since they might be corrupted:
+results/ADrep2subsample.Aligned.out.bam
+[Wed Feb 21 13:04:03 2024]
+Error in rule star:
+    jobid: 1
+    input: samples/ADrep1subsample_R1.fastq.gz, samples/ADrep1subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/ADrep1subsample.Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/ADrep1subsample_R1.fastq.gz samples/ADrep1subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//ADrep1subsample.
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Wed Feb 21 13:04:03 2024]
+Error in rule star:
+    jobid: 6
+    input: samples/P4rep2subsample_R1.fastq.gz, samples/P4rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P4rep2subsample.Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P4rep2subsample_R1.fastq.gz samples/P4rep2subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P4rep2subsample.
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job star since they might be corrupted:
+results/ADrep1subsample.Aligned.out.bam
+Removing output files of failed job star since they might be corrupted:
+results/P4rep2subsample.Aligned.out.bam
+[Wed Feb 21 13:04:03 2024]
+Error in rule star:
+    jobid: 4
+    input: samples/P0rep2subsample_R1.fastq.gz, samples/P0rep2subsample_R2.fastq.gz, samples/m39_subset_star
+    output: results/P0rep2subsample.Aligned.out.bam
+    shell:
+        
+		STAR --genomeDir samples/m39_subset_star/ --readFilesCommand zcat --readFilesIn samples/P0rep2subsample_R1.fastq.gz samples/P0rep2subsample_R2.fastq.gz --outSAMtype BAM Unsorted --outFileNamePrefix results//P0rep2subsample.
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job star since they might be corrupted:
+results/P0rep2subsample.Aligned.out.bam
+[Wed Feb 21 13:04:49 2024]
+Finished job 10.
+1 of 19 steps (5%) done
+Terminating processes on user request, this might take some time.
+[Wed Feb 21 13:17:16 2024]
+Error in rule get_m39:
+    jobid: 9
+    output: results/GRCm39.fa.gz
+    shell:
+        
+		wget -O results/GRCm39.fa.gz https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M34/GRCm39.primary_assembly.genome.fa.gz
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2024-02-21T130402.675823.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

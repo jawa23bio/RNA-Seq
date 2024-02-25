@@ -1,0 +1,40 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 24 17:11:21 2024]
+localrule fastqc:
+    input: samples/full_files/ADrep1_R2.fastq.gz
+    output: results/ADrep1_R2_fastqc.html
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=ADrep, rep=1, number=2
+    resources: mem_mb=1904, mem_mib=1816, disk_mb=1904, disk_mib=1816, tmpdir=/scratch/4846024.1.academic
+
+Started analysis of ADrep1_R2.fastq.gz
+Approx 5% complete for ADrep1_R2.fastq.gz
+Approx 10% complete for ADrep1_R2.fastq.gz
+Approx 15% complete for ADrep1_R2.fastq.gz
+Approx 20% complete for ADrep1_R2.fastq.gz
+Approx 25% complete for ADrep1_R2.fastq.gz
+Approx 30% complete for ADrep1_R2.fastq.gz
+Approx 35% complete for ADrep1_R2.fastq.gz
+Approx 40% complete for ADrep1_R2.fastq.gz
+Approx 45% complete for ADrep1_R2.fastq.gz
+Approx 50% complete for ADrep1_R2.fastq.gz
+Approx 55% complete for ADrep1_R2.fastq.gz
+Approx 60% complete for ADrep1_R2.fastq.gz
+Approx 65% complete for ADrep1_R2.fastq.gz
+Approx 70% complete for ADrep1_R2.fastq.gz
+Approx 75% complete for ADrep1_R2.fastq.gz
+Approx 80% complete for ADrep1_R2.fastq.gz
+Approx 85% complete for ADrep1_R2.fastq.gz
+Approx 90% complete for ADrep1_R2.fastq.gz
+Approx 95% complete for ADrep1_R2.fastq.gz
+[Sat Feb 24 17:13:04 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Storing output in storage.
