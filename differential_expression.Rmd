@@ -15,6 +15,11 @@ setwd("/projectnb/bf528/students/jawa/project-1-template-jawa23bio")
 ```{r}
 library(tidyverse)
 library(DESeq2)
+library(fgsea)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(gridExtra)
 ```
 
 ### Load the counts data
@@ -81,4 +86,108 @@ results <- left_join(results, gene_map, by = "gene_id")
 results <- results %>% select(gene_id, gene_name, everything())
 
 results
+```
+
+## _Gene Set Enrichment Analysis_
+
+### Ordering the results based on positive log2FC
+```{r}
+results_ordered <- results[order(-results$log2FoldChange), ]
+results_ordered
+```
+
+### Creating a ranked list for FGSEA
+```{r}
+rnk_list <- setNames(results_ordered$log2FoldChange, results_ordered$gene_name)
+head(rnk_list)
+```
+
+### Gene Set Enrichment comparing C2 Genes from MSIGDB
+```{r}
+c2_genes <- fgsea::gmtPathways('/projectnb/bf528/materials/project_1_rnaseq/m2.all.v2023.2.Mm.symbols.gmt')
+fgsea_results <- fgsea(c2_genes, rnk_list, minSize = 15, maxSize = 500)
+fgsea_final <- fgsea_results[order(-fgsea_results$NES)]
+fgsea_final
+```
+
+### Exploring the top 10 and last 10 pathways
+```{r}
+head(fgsea_final, 10)
+tail(fgsea_final, 10)
+```
+
+## _Figure 1D_
+
+### Function to generate gene expression plots
+```{r}
+plot_gene_expression <- function(data, genes, title) {
+  filtered_data <- data %>%
+    filter(gene_name %in% genes)
+  
+  ggplot(filtered_data, aes(x = factor(Condition, levels = c("P0", "P4", "P7", "AD")), y = Value, group = gene_name, color = gene_name)) +
+    geom_line() +
+    geom_point() +
+    labs(title = title,
+         x = "Condition",
+         y = "Expression Value") +
+    theme_minimal()
+}
+```
+
+### Extract normalized counts
+```{r}
+normalized_counts <- counts(dds, normalized = TRUE)
+norma <- data.frame(normalized_counts) %>%
+  rownames_to_column(var = "gene_id")
+
+head(norma)
+```
+### Join the GeneIDs with GeneNames
+```{r}
+normal_final <- left_join(norma, gene_map, by = "gene_id") %>%
+  select(gene_id, gene_name, everything())
+
+head(normal_final)
+```
+
+### Calculate mean values for conditions
+```{r}
+normal_1 <- normal_final %>%
+  mutate(
+    AD = rowMeans(select(., starts_with("ADrep")), na.rm = TRUE),
+    P0 = rowMeans(select(., starts_with("P0rep")), na.rm = TRUE),
+    P4 = rowMeans(select(., starts_with("P4rep")), na.rm = TRUE),
+    P7 = rowMeans(select(., starts_with("P7rep")), na.rm = TRUE)
+  )
+
+final <- normal_1 %>% select(gene_name, AD, P0, P4, P7)
+
+head(final)
+```
+### Pivot to long format
+```{r}
+final_long <- final %>%
+  pivot_longer(cols = -gene_name, names_to = "Condition", values_to = "Value") %>%
+  arrange(Condition)
+
+final_long
+```
+
+### Lists of genes for each group
+```{r}
+sarcomere_genes <- c("Pdlim5", "Pygm", "Myoz2", "Des", "Csrp3", "Tcap", "Cryab")
+mitochondria_genes <- c("Mpc1", "Prdx3", "Acat1", "Echs1", "Slc25a11", "Phyh")
+cell_cycle_genes <- c("Cdc7", "E2f8", "Cdk7", "Cdc26", "Cdc6", "E2f1", "Cdc27", "Bora", "Cdc45", "Rad51", "Aurkb", "Cdc23")
+```
+
+### Generate plots for each gene group
+```{r}
+plot_sarcomere <- plot_gene_expression(final_long, sarcomere_genes, "Gene Expression Plot (Sarcomere Genes)")
+plot_mitochondria <- plot_gene_expression(final_long, mitochondria_genes, "Gene Expression Plot (Mitochondria Genes)")
+plot_cell_cycle <- plot_gene_expression(final_long, cell_cycle_genes, "Gene Expression Plot (Cell Cycle Genes)")
+```
+
+### Arrange plots in a single panel
+```{r}
+combined_plots <- grid.arrange(plot_sarcomere, plot_mitochondria, plot_cell_cycle, ncol = 1)
 ```
