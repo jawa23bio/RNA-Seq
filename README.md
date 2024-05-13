@@ -1,7 +1,6 @@
 # RNA-Seq Pipeline
 ## Transcriptional Profile of Mammalian Cardiac Regeneration with mRNA-Seq
-This analysis is based on the data published in the following study:
-- O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammalian Cardiac Regeneration. Circ Res. Feb 2015. PMID: 25477501
+This analysis is based on the data published in the following study: O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammalian Cardiac Regeneration. Circ Res. Feb 2015. PMID: 25477501
 
 We have focused specifically on the data from the first figure of the paper, which involves the dataset containing samples from p0, p4, p7, and adult mouse heart ventricle cells. While our analysis deviates from the published methods to incorporate more up-to-date strategies and tools, our workflow aims to capture and recreate the same core biological signals observed in the original work.
 
