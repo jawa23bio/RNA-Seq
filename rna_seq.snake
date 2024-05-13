@@ -1,0 +1,124 @@
+# use the names variable to store your list of file names
+sample=['AD', 'P0', 'P4', 'P7']
+rep = ['rep1', 'rep2']
+number=[1,2]
+
+rule all:
+	input:
+		'results/multiqc_report.html',
+		'results/GRCm39.fa.gz',
+		expand('results/{sample}{rep}.txt', sample = ['AD', 'P0', 'P4', 'P7'], rep = ['rep1', 'rep2']),
+        'results/full_genemap.csv',
+        'results/full_filtered_counts_matrix.csv'
+
+
+rule fastqc:
+	input:
+		fastq = 'samples/full_files/{sample}{rep}_R{number}.fastq.gz',
+	output:
+		fastqc = 'results/{sample}{rep}_R{number}_fastqc.html'
+	params:
+		outdir = 'results/'
+	shell:
+		'''
+        fastqc {input.fastq} -o {params.outdir}
+		'''
+
+# remember that you want multiqc to run only after fastqc has run on all the files
+rule multiqc:
+	input:
+		fastqc = 'results/{sample}{rep}_R{number}_fastqc.html'
+	output:
+		multiqc = 'results/multiqc_report.html'
+	params:
+		outdir = 'results/'
+	shell:
+		'''
+        multiqc -f {params.outdir} -o {params.outdir}
+		'''
+
+rule get_m39:
+	output:
+		'results/GRCm39.fa.gz'
+	shell:
+		'''
+		wget -O {output} https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M34/GRCm39.primary_assembly.genome.fa.gz
+		'''
+
+rule get_m39_gtf:
+	output:
+		'results/m39_GA.gtf'
+	params:
+		outdir = 'results/m39_GA.gtf.gz'
+	shell:
+		'''
+		wget -O {params.outdir} https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M34/gencode.vM34.primary_assembly.annotation.gtf.gz
+		gunzip -k {output}
+		'''
+
+# make sure to read up on how STAR names it output files	
+rule star:
+	input:
+		fastq1 = 'samples/full_files/{sample}{rep}_R1.fastq.gz',
+		fastq2 = 'samples/full_files/{sample}{rep}_R2.fastq.gz',
+		Genome_index = 'results/m39_star/'
+	output:	
+		bam = 'results/{sample}{rep}.Aligned.out.bam'
+	params:
+		outdir = 'results/'
+	shell:
+		'''
+		STAR --genomeDir {input.Genome_index} --readFilesIn {input.fastq1} {input.fastq2} --readFilesCommand zcat --outSAMtype BAM Unsorted --outFileNamePrefix {params.outdir}{wildcards.sample}{wildcards.rep}.
+		'''
+
+rule samtools_flagstat:
+	input:
+		bam = 'results/{sample}{rep}.Aligned.out.bam'
+	output:
+		flagstat = 'results/{sample}{rep}.txt'
+	shell:
+		'''
+		samtools flagstat {input.bam} > {output.flagstat}
+		'''
+        
+rule verse:
+    input:
+        bam='results/{sample}{rep}.Aligned.out.bam',
+        gtf='results/m39_GA.gtf'
+    output:
+        exon='results/{sample}{rep}.exon.txt'
+    params:
+        prefix='results/{sample}{rep}',
+        sample=lambda wildcards: wildcards.sample
+        rep=lambda wildcards: wildcards.rep
+    shell:
+        '''
+        verse -S -a {input.gtf} -o {params.prefix} {input.bam}
+        '''
+rule concat_df:
+  input:
+    verse_files = 'results/{sample}{rep}.exon.txt'
+  output:
+    cts_matrix = 'results/full_matrix.csv'
+  shell:
+    '''
+    python concat_df.py -i {input.verse_files} -o {output.cts_matrix}
+    '''
+rule parse_gtf:
+    input:
+        gtf = 'results/m39_GA.gtf'
+    output:
+        map = 'results/full_genemap.csv'
+    shell:
+        '''
+        python parse_gtf.py -i {input.gtf} -o {output.map}
+        '''
+rule filter_counts:
+    input:
+        matrix = 'results/full_matrix.csv'
+    output:
+        filter = 'results/full_filtered_counts_matrix.csv'
+    shell:
+        '''
+        python filter_cts_mat.py -i {input.matrix} -o {output.filter}
+        '''
