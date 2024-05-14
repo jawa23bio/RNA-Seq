@@ -1,4 +1,4 @@
-# RNA-Seq Pipeline
+# RNA-Seq Analysis
 ## Transcriptional Profile of Mammalian Cardiac Regeneration with mRNA-Seq
 This analysis is based on the data published in the following study: O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammalian Cardiac Regeneration. Circ Res. Feb 2015. PMID: 25477501
 
